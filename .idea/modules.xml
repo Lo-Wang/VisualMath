@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/easyMath.iml" filepath="$PROJECT_DIR$/.idea/easyMath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/VisualMath.iml" filepath="$PROJECT_DIR$/.idea/VisualMath.iml" />
     </modules>
   </component>
 </project>
