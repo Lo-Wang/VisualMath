@@ -1,0 +1,35 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Mulish:400|Poppins:700,600");
+@font-face {
+  font-family: "Mont-ExtraLightDEMO";
+  src: url("https://anima-uploads.s3.amazonaws.com/5c517bd4355a040009e0372f/Mont-ExtraLightDEMO.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Mont-HeavyDEMO";
+  src: url("https://anima-uploads.s3.amazonaws.com/5c41cf553ad67b0009daf558/Fontfabric - Mont Heavy DEMO.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Mont-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/6553a1f9ed50950ccf285614/fonts/mont-extralightdemo.otf")
+    format("opentype");
+}

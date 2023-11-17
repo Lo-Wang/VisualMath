@@ -1,21 +1,132 @@
-{% extends 'main/layout.html' %} <!-- Наследуем всё от файла layout.html -->
 {% load static %}
-
-{% block title %}
-    {{ title }}
-{% endblock %}
-
-{% block content %}
-    <div class="main_div">
-    <h1>{{ title }}</h1>
-    <p>SampleText SampleText SampleText SampleText SampleText Sample TextSample TextSampleText</p>
-    <p>Видео</p>
-    <video controls width="500">
-    <source src="{% static 'main/vid/StarAnimation.mp4' %}"
-    type="video/mp4">
-    </video>
-    {% for value in values %}
-        <p>{{ value }}</p>
-    {% endfor %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'main/css/globals.css'%}" />
+    <link rel="stylesheet" href="{% static 'main/css/style.css'%}" />
+    <link rel="stylesheet" href="{% static 'main/css/styleguide.css'%}" />
+  </head>
+  <body>
+    <div class="homepage-page">
+      <div class="navbar">
+        <div class="navigation">
+          <img class="logo" src="{% static 'main/img/logo-3.svg'%}" />
+          <button class="button">
+            <div class="label">алгебра</div>
+            <div class="caret-down"><img class="img" src="{% static 'main/img/caretdown-1.png'%}" /></div>
+          </button>
+          <button class="button">
+            <div class="label">геометрия</div>
+            <div class="caret-down"><img class="img" src="{% static 'main/img/caretdown-2.png'%}" /></div>
+          </button>
+        </div>
+        <div class="info">
+          <div class="text-wrapper">Отзывы</div>
+          <div class="text-wrapper">Контакты</div>
+          <div class="text-wrapper">О нас</div>
+        </div>
+      </div>
+      <div class="hero-section">
+        <div class="title">
+          <img class="logo-2" src="{% static 'main/img/logo-2.svg'%}" />
+          <div class="headline-subtitle">
+            <p class="div">Интерактивный справочник по математике VisualMath</p>
+            <p class="p"><span class="span">Изучай математику </span> <span class="text-wrapper-2">наглядно!</span></p>
+          </div>
+        </div>
+        <div class="examples">
+          <div class="video-wrapper"><div class="video"> <video><source src="{% static 'main/vid/Idr.mp4' %}" /></video></div></div>
+          <div class="video-wrapper"><div class="video"><video><source src="{% static 'main/vid/Pythagoras.mp4' %}" /></video></div></div>
+          <div class="video-wrapper"><div class="video"><video><source src="{% static 'main/vid/Quadrantic_equation.mp4' %}" type="video/webm" /></video></div></div>
+        </div>
+      </div>
+      <div class="features">
+        <div class="headline">
+          <p class="text-wrapper-3">
+            Мы представляем первый справочник по математике с наглядными анимациями ко всем ключевым темам школьной
+            программы
+          </p>
+          <p class="text-wrapper-3">
+            Больше не придется рисовать пояснения на доске - наши анимации по шагам покажут все необходимые
+            преобразования
+          </p>
+        </div>
+        <div class="cards-row">
+          <div class="feature-card">
+            <div class="card-info">
+              <div class="icon"><img class="img-2" src="{% static 'main/img/usercircle.png' %}" /></div>
+              <div class="text">
+                <div class="write-a-feature">Для учителя и ученика</div>
+                <p class="write-benefits">
+                  Справочник может быть полезен как при самостоятельном изучении дома, так и для работы в классе
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-card-2">
+            <div class="card-info">
+              <div class="arrow-fat-lines-up-wrapper"><img class="img-2" src="{% static 'main/img/arrowfatlinesup.png' %}" /></div>
+              <div class="text">
+                <div class="write-a-feature-2">Закрепляем знания</div>
+                <p class="write-benefits">
+                  Для закрепления полученных знаний в конце каждой темы будут предложены задачи для самостоятельного
+                  решения
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-card-2">
+            <div class="card-info">
+              <div class="cube-wrapper"><img class="img-2" src="{% static 'main/img/cube.png' %}" /></div>
+              <div class="text">
+                <div class="write-a-feature-2">Интерактив</div>
+                <p class="write-benefits">
+                  При решении задач можно взаимодействовать с объектами, получать подсказки и узнать правильный ответ
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="highlighted-CTA">
+        <div class="visuals"><div class="video-2"><video><source src="{% static 'main/vid/StarAnimation.mp4' %}" type="video/webm" /></video></div></div>
+        <header class="header">
+          <div class="title-subtitle">
+            <p class="text-wrapper-4">Начинай заниматься вместе с нами!</p>
+            <p class="text-wrapper-5">
+              Два больших блока: алгебра и геометрия<br />Интерактивное поле для решения задач базового и повышенного
+              уровня сложности<br />Темы подобраны в соответствии с последними требованиями ФГОС<br />Анимации-пояснения
+              ко всем темам
+            </p>
+          </div>
+          <div class="buttons-area">
+            <button class="button-2"><div class="label-2">алгебра</div></button>
+            <button class="button-2"><div class="label-2">геометрия</div></button>
+          </div>
+        </header>
+      </div>
+      <footer class="footer">
+        <img class="logo-3" src="{% static 'main/img/logo-1.svg' %}" />
+        <div class="view">
+          <div class="frame">
+            <a href="https://t.me/Sv_allmight" target="_blank" rel="noopener noreferrer"
+              ><div class="social-links"><img class="social-icons" src="{% static 'main/img/social-icons.png' %}" /></div
+            ></a>
+            <div class="text-wrapper-6">@Sv_allmight - Александр Свечников</div>
+          </div>
+          <div class="frame">
+            <a href="https://t.me/richmenaft" target="_blank" rel="noopener noreferrer"
+              ><div class="social-links"><img class="social-icons" src="{% static 'main/img/social-icons.png' %}" /></div
+            ></a>
+            <div class="text-wrapper-6">@richmenaft - Денис Огородов</div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="text-wrapper-7">Отзывы</div>
+          <div class="text-wrapper-7">Контакты</div>
+          <div class="text-wrapper-7">О нас</div>
+        </div>
+      </footer>
     </div>
-{% endblock %}
+  </body>
+</html>
