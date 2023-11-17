@@ -1,17 +1,12 @@
 from django.shortcuts import render
 # Create your views here.
 
-data = {
-    'title': 'Главная страница',
-    'values': ['Some', 'Hello', '123']
-}
-
 
 def index(request):
-    return render(request, 'main/index.html', data)
+    return render(request, 'main/index.html')
 
 
-def about(request):
-    return render(request, "main/about.html")
+def content(request):
+    return render(request, "main/content.html")
 
 

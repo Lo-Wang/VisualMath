@@ -4,5 +4,5 @@ from . import views
 # (панель администратора, установлена по умолчанию в любом Джанго проекте)
 urlpatterns = [
     path('', views.index, name='home'),
-    path('about', views.about, name='about'),
+    path('content', views.content, name='content'),
 ]
