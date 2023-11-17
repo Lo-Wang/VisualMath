@@ -23,6 +23,17 @@
       <list>
         <option value="$MODULE_DIR$/main/templates/main" />
         <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/geometry/templates" />
+        <option value="$MODULE_DIR$/main/templates" />
+        <option value="$MODULE_DIR$/geometry/templates/geometry" />
+        <option value="$MODULE_DIR$/algebra/templates" />
+        <option value="$MODULE_DIR$/algebra/templates/algebra" />
+        <option value="$MODULE_DIR$/geometry/templates/geometry/7 class" />
+        <option value="$MODULE_DIR$/geometry/templates/geometry/8 class" />
+        <option value="$MODULE_DIR$/geometry/templates/geometry/9 class" />
+        <option value="$MODULE_DIR$/algebra/templates/algebra/7 class" />
+        <option value="$MODULE_DIR$/algebra/templates/algebra/8 class" />
+        <option value="$MODULE_DIR$/algebra/templates/algebra/9 class" />
       </list>
     </option>
   </component>
