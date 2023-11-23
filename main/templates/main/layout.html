@@ -1,0 +1,28 @@
+<!-- говорим шаблонизатору Jinjer, что мы подключаем сюда файлы из папки static -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css'%}">
+</head>
+<body>
+<!-- Используем шаблонизатор Jinjer. Он будет подставлять переданные данные в блок контент
+ между этими двумя строками. Таким образом мы сделали общий шаблон.-->
+    <aside>
+        <img src="{% static "main/img/testImage.png" %}" alt="testImage">
+        <span class="logo">VisualMath</span>
+        <h3>Навигация</h3>
+        <ul>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'content' %}">Содержание</a></li>
+            <li><a href="">Контакты</a></li>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
