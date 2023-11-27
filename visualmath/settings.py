@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'main',
+    'geometry',
+    'algebra',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
