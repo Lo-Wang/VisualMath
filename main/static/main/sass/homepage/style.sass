@@ -1,12 +1,13 @@
 @import "normalizee.scss"
 @import "resets.scss"
+ 
 /* Параметры страницы */
 *
     box-sizing: border-box
 body
     overflow-x: hidden
     background: radial-gradient(50% 50% at 50% 50%, #443D3E 0%, #231F20 100%)
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
 .conteiner
     max-width: 1440px
     margin: 0 auto
@@ -32,145 +33,61 @@ body
 .main-section__header-logo
     float: left
     margin-right: 32px
-.navbar 
-    background-color: transparent
-    background-repeat: no-repeat
-.navbar a 
+.navbar
     float: left
-    font-size: 25px
-    color: white
-    text-align: center
-    padding: 14px 16px
-    text-decoration: none
-.dropdown 
-    float: left
-.dropdown .dropbtn 
-    font-size: 25px
-    font-weight: 900  
-    border: none
-    outline: none
-    color: #F1F0F1
-    padding: 14px 16px
-    background-color: inherit
-    font-family: inherit
-    margin: 0
-    border-radius: 14px
-    border: 1.339px solid var(--White, #F1F0F1)
-    margin-right: 35px
-.dropbtn-arrow
-    width: 15px
-.navbar a:hover, .dropdown:hover .dropbtn 
-    background-color: transparent
-    background-repeat: no-repeat
-.dropdown-content 
-    display: none
-    position: absolute
-    background-color: transparent
-    background-repeat: no-repeat
-    min-width: 160px
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
-    z-index: 1
-    border-radius: 14px
-    border: 1.339px solid var(--White, #F1F0F1)
-.dropdown-content a 
-    float: none
-    color: #F1F0F1
-    font-weight: 900
+.dropbtn 
     padding: 12px 16px
-    text-decoration: none
-    display: block
-    text-align: center
-    border-radius: 14px
-    border: 1.339px solid var(transparent, no-repeat)
-.dropdown-content a:hover 
+    border-radius: 50px
+    border: 2px solid #443D3E
+    background-color: transparent
+    background-repeat: no-repeat
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    transition: all .5s ease
+    margin-right: 20px
+    margin-bottom: 40px
+.dropbtn:hover 
     background-color: #FFA782
-.dropdown:hover .dropdown-content 
-    display: block  
-
-
-
-
-.navbar-1 
-    background-color: transparent
-    background-repeat: no-repeat
-.navbar-1 a 
-    float: left
-    font-size: 25px
-    color: white
-    text-align: center
-    padding: 14px 16px
+    color: #FFA782
+    box-shadow: #FFA782 0px 7px 29px 0px
+.dropbtn:active 
+    background-color: #FFA782(261deg 80% 48%)
+    box-shadow: #FFA782 0px 0px 0px 0px
+    transition: 100ms
+.dropbtn__algebra
     text-decoration: none
-.dropdown-1 
-    float: left
-.dropdown-1 .dropbtn-1
-    font-size: 25px
-    font-weight: 900  
-    border: none
-    outline: none
-    color: #F1F0F1
-    padding: 14px 16px
-    background-color: inherit
-    font-family: inherit
-    margin: 0
-    border-radius: 14px
-    border: 1.339px solid var(--White, #F1F0F1)
-    margin-right: 35px
-.dropbtn-arrow
-    width: 15px
-.navbar-1 a:hover, .dropdown-1:hover .dropbtn-1 
-    background-color: transparent
-    background-repeat: no-repeat
-.dropdown-content-1 
-    display: none
-    position: absolute
-    background-color: transparent
-    background-repeat: no-repeat
-    min-width: 190px
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
-    z-index: 1
-    border-radius: 14px
-    border: 1.339px solid var(--White, #F1F0F1)
-.dropdown-content-1 a 
-    float: none
-    color: #F1F0F1
+    color: #faf6f6
+    font-size: 20px
+    padding: 2px 10px
     font-weight: 900
+.dropbtn-1
+    float: left
     padding: 12px 16px
-    text-decoration: none
-    text-align: center
-    display: block
-    border-radius: 14px
-    border: 1.339px solid var(transparent, no-repeat)
-.dropdown-content-1 a:hover 
+    border-radius: 50px
+    border: 2px solid #443D3E
+    background-color: transparent
+    background-repeat: no-repeat
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    transition: all .5s ease
+    margin-right: 20px
+    margin-bottom: 40px
+.dropbtn-1:hover 
     background-color: #FFA782
-.dropdown-1:hover .dropdown-content-1 
-    display: block 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    color: #FFA782
+    box-shadow: #FFA782 0px 7px 29px 0px
+.dropbtn-1:active 
+    background-color: #FFA782(261deg 80% 48%)
+    box-shadow: #FFA782 0px 0px 0px 0px
+    transition: 100ms
+.dropbtn__geometry
+    text-decoration: none
+    color: #faf6f6
+    font-size: 20px
+    padding: 2px 10px
+    font-weight: 900
 .main-section__nav-menu
     float: right
     padding-top: 11px
@@ -188,24 +105,27 @@ body
     display: inline
     margin-right: 20px
 .second-sectione
-    padding-top: 184px
+    padding-top: 120px
 .second-sectione__image
+    padding-top: 70px
     width: 600px
-    margin-bottom: 115px
+    margin-bottom: 90px
 .second-sectione__text
     float: right
-    padding-top: 50px
+    width: 669px
+    height: 400px
 .second-sectione__heading
     color: #FFA782
     white-space: pre-line
-    font-size: 50px
+    font-size: 75px
     font-weight: 900
     margin-bottom: 30px
-    line-height: 65px
+    line-height: 78px 
 .second-sectione__paragraph
     color: #82DAFF
-    font-size: 25px
+    font-size: 35px
     font-weight: 900
+    margin-bottom: 30px
 span
     color: #FF82A2
 .second-sectione__video-1
@@ -220,14 +140,13 @@ span
     margin-right: 20px
     margin-bottom: 120px */
 .third-section
-    max-width: 1440px
     height: 572px
     margin: 0 auto
-    padding-top: 200px
+    padding-top: 130px
 .third-section::before
         content: ""
         position: absolute
-        top: 1140px
+        top: 1080px
         left: 50%
         width: 3440px
         height: 772px
@@ -347,14 +266,14 @@ span
     text-align: center
     line-height: 24px
 .fourth-section
-    max-width: 1440px
+    /* max-width: 1440px */
     height: auto
     margin: 0 auto
-    padding-top: 505px
+    padding-top: 390px
 .fourth-section::before
         content: ""
         position: absolute
-        top: 1910px
+        top: 1850px
         left: 50%
         width: 3300px
         height: 795px
@@ -363,18 +282,19 @@ span
         background-color: #FFECF0
 .fourth-section-video
     object-fit: contain
-    width: 750px
+    width: 900px
     height: 100%
-    border-radius: 20px 
+    border-radius: 20px
+    margin-top: 77px
 .fourth-section-text
     float: right
-    width: 480px
+    width: 486px
 .fourth-section-heading
     font-size: 50px
     font-weight: 900
     color: #2D2D2D
     margin-bottom: 20px
-    line-height: 50px
+    line-height: 60px
 .fourth-section-items
     font-size: 28px
     font-weight: 350
@@ -382,12 +302,10 @@ span
     margin-bottom: 40px 
     padding-left: 28px
     line-height: 32px
-.fourth-section-items ul
-  list-style: disc none
 li::marker
     font-size: 15px
 .fourth-section-button-algebra
-    width: 158px
+    width: 260px
     height: 53px
     margin-right: 40px
     font-size: 25px
@@ -398,29 +316,28 @@ li::marker
     letter-spacing: -0.625px
     background-color: transparent
     background-repeat: no-repeat
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px
+    letter-spacing: 1.5px
+    transition: all .5s ease
+    margin-bottom: 157px
+.fourth-section-button-algebra:hover
+    background-color: #FFA782
+    color: #FFA782
+    box-shadow: #FFA782 0px 7px 29px 0px
+.fourth-section-button-algebra:active 
+    background-color: #FFA782(261deg 80% 48%)
+    box-shadow: #FFA782 0px 0px 0px 0px
+    transition: 100ms  
 .fourth-section-algebra
     text-decoration: none
     color: #443D3E
-.fourth-section-button-geometry
-    width: 158px
-    height: 53px
-    font-size: 25px
-    padding: 10px 15px
-    border-radius: 20px
-    border: 2px solid #443D3E
-    font-weight: 900
-    letter-spacing: -0.625px
-    background-color: transparent
-    background-repeat: no-repeat
-    margin-bottom: 115px
 .fourth-section-geometry
     text-decoration: none
     color: #443D3E
 .footer-social
-    max-width: 1440px
     height: auto
     margin: 0 auto
-    padding-top: 220px
+    padding-top: 135px
 .section-social::before
         content: ""
         position: absolute
@@ -432,7 +349,6 @@ li::marker
         z-index: -1
 .footer-social__logo
     float: left
-    padding-bottom: 10px
     margin-right: 100px
 .footer-social__connection
     padding-top: 5px

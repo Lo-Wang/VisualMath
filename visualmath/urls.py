@@ -19,5 +19,7 @@ from django.urls import path, include
 # (панель администратора, установлена по умолчанию в любом Джанго проекте)
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls'))
+    path('', include('main.urls')),
+    path('geometry/', include('geometry.urls')),
+    path('algebra/', include('algebra.urls')),
 ]

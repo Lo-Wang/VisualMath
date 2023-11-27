@@ -10,3 +10,7 @@ def content(request):
     return render(request, "main/content.html")
 
 
+def maintenance(request):
+    return render(request, "main/maintenance.html")
+
+

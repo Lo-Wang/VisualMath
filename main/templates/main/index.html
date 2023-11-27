@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'main/css/homepage/style.css' %}">
     <link rel="shortcut icon" href="{% static 'main/icons/logo-1.svg' %}">
     <title>VisualMath</title>
 </head>
@@ -17,38 +17,26 @@
     <div class="conteiner main-section__nav-container">
         <!--Верхняя секция сайта-->
         <header class="main-section__header">
-            <img class="main-section__header-logo" src="{% static 'main/icons/logo-3.svg' %}" alt="">
+            <a href="{% url 'home' %}"><img class="main-section__header-logo" src="{% static 'main/icons/logo-3.svg' %}"
+                                            alt=""></a>
             <nav>
                 <div class="navbar">
                     <div class="dropdown">
-                        <button class="dropbtn"> алгебра
-                            <img class="dropbtn-arrow" src="{% static 'main/icons/caretdown-1.png' %}" alt="">
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#">7 класс</a>
-                            <a href="#">8 класс</a>
-                            <a href="#">9 класс</a>
-                        </div>
+                        <button class="dropbtn"><a class="dropbtn__algebra" href="">алгебра</a></button>
                     </div>
                 </div>
                 <div class="navbar-1">
                     <div class="dropdown-1">
-                        <button class="dropbtn-1"> геометрия
-                            <img class="dropbtn-arrow" src="{% static 'main/icons/caretdown-1.png' %}" alt="">
-                            <i class="fa fa-caret-down-1"></i>
-                        </button>
-                        <div class="dropdown-content-1">
-                            <a href="#">7 класс</a>
-                            <a href="#">8 класс</a>
-                            <a href="#">9 класс</a>
-                        </div>
+                        <button class="dropbtn-1"><a class="dropbtn__geometry" href="">геометрия</a></button>
                     </div>
                 </div>
                 <ul class="main-section__nav-menu">
-                    <li class="main-section__nav-menu-li" ><a class="main-section__nav-menu-items" href="#">Отзывы</a></li>
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Контакты</a></li>
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">О нас</a></li>
+                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Отзывы</a>
+                    </li>
+                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Контакты</a>
+                    </li>
+                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">О нас</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -58,14 +46,18 @@
                 <h1 class="second-sectione__heading">
                     Интерактивный
                     справочник по
-                    математике VisualMath
+                    математике
+                    VisualMath
                 </h1>
                 <p class="second-sectione__paragraph">Изучай математику <span>наглядно!</span></p>
             </div>
             <div class="second-sectione__video">
-                <video class="second-sectione__video-1" disablePictureInPicture autoplay loop muted playsinline src="{% static 'main/video/3 видео.mp4'%}"></video>
-                <video class="second-sectione__video-1" disablePictureInPicture autoplay loop muted playsinline src="{% static 'main/video/1.mp4'%}"></video>
-                <video class="second-sectione__video-1" disablePictureInPicture autoplay loop muted playsinline src="{% static 'main/video/Pythagoras.mp4'%}"></video>
+                <video class="second-sectione__video-1" disablePictureInPicture autoplay loop muted playsinline
+                       src="{% static 'main/video/3 видео.mp4' %}"></video>
+                <video class="second-sectione__video-1" disablePictureInPicture autoplay loop muted playsinline
+                       src="{% static 'main/video/1.mp4' %}"></video>
+                <video class="second-sectione__video-1" disablePictureInPicture autoplay loop muted playsinline
+                       src="{% static 'main/video/Pythagoras.mp4' %}"></video>
             </div>
         </section>
         <section class="third-section">
@@ -84,32 +76,38 @@
                 <div class="third-section__box-teacher">
                     <img class="third-section__img-teacher" src="{% static 'main/icons/usercircle.png' %}" alt="">
                     <h2 class="third-section__heading-teacher">Для учителя и ученика </h2>
-                    <p class="third-section__paragraph-teacher">Справочник может быть полезен как при самостоятельном изучении дома, так и для работы в классе</p>
+                    <p class="third-section__paragraph-teacher">Справочник может быть полезен как при самостоятельном
+                        изучении дома, так и для работы в классе</p>
                 </div>
                 <div class="third-section__box-knowledge">
-                    <img class="third-section__img-knowledge" src="{% static 'main/icons/arrowfatlinesup.png' %}" alt="">
+                    <img class="third-section__img-knowledge" src="{% static 'main/icons/arrowfatlinesup.png' %}"
+                         alt="">
                     <h2 class="third-section__heading-knowledge">Закрепляем знания</h2>
-                    <p class="third-section__paragraph-knowledge">Для закрепления полученных знаний в конце каждой темы будут предложены задачи для самостоятельного решения</p>
+                    <p class="third-section__paragraph-knowledge">Для закрепления полученных знаний в конце каждой темы
+                        будут предложены задачи для самостоятельного решения</p>
                 </div>
                 <div class="third-section__box-Interactive">
                     <img class="third-section__img-Interactive" src="{% static 'main/icons/cube.png' %}" alt="">
                     <h2 class="third-section__heading-Interactive">Интерактив</h2>
-                    <p class="third-section__paragraph-Interactive">При решении задач можно взаимодействовать с объектами, получать подсказки и узнать правильный ответ</p>
+                    <p class="third-section__paragraph-Interactive">При решении задач можно взаимодействовать с
+                        объектами, получать подсказки и узнать правильный ответ</p>
                 </div>
             </div>
         </section>
         <section class="fourth-section">
-            <video class="fourth-section-video" disablePictureInPicture autoplay loop muted playsinline src="{% static 'main/video/Quadrantic_equation.mp4' %}"></video>
+            <video class="fourth-section-video" disablePictureInPicture autoplay loop muted playsinline
+                   src="{% static 'main/video/Quadrantic_equation.mp4' %}"></video>
             <div class="fourth-section-text">
                 <h2 class="fourth-section-heading">Начинай заниматься вместе с нами!</h2>
-                <ul  class="fourth-section-items">
+                <ul class="fourth-section-items">
                     <li type="disc"> Два больших блока: алгебра и геометрия</li>
                     <li type="disc"> Интерактивное поле для решения задач базового и повышенного уровня сложности</li>
                     <li type="disc"> Темы подобраны в соответствии с последними требованиями ФГОС</li>
                     <li type="disc"> Анимации-пояснения ко всем темам</li>
                 </ul>
-                <button class="fourth-section-button-algebra"><a href="" class="fourth-section-algebra">алгебра</a></button>
-                <button class="fourth-section-button-geometry"> <a href="" class="fourth-section-geometry">геометрия</a></button>
+                <button class="fourth-section-button-algebra"><a href="{% url 'maintenance' %}"
+                                                                 class="fourth-section-algebra">Начать
+                    учиться!</a></button>
             </div>
         </section>
         <footer class="footer">
@@ -117,9 +115,11 @@
                 <img class="footer-social__logo" src="{% static 'main/icons/logo-3.svg' %}" alt="">
                 <div class="footer-social__connection">
                     <img class="footer-social-img" src="{% static 'main/icons/social-icons.png' %}" alt="">
-                    <a class="footer-social__telegram" href="https://t.me/Sv_allmight" target="_blank">@Sv_allmight - Александр Свечников</a>
+                    <a class="footer-social__telegram" href="https://t.me/Sv_allmight" target="_blank">@Sv_allmight -
+                        Александр Свечников</a>
                     <img class="footer-social-img" src="{% static 'main/icons/social-icons.png' %}" alt="">
-                    <a class="footer-social__telegram" href="https://t.me/richmenaft" target="_blank">@richmenaft - Денис Огородов</a>
+                    <a class="footer-social__telegram" href="https://t.me/richmenaft" target="_blank">@richmenaft -
+                        Денис Огородов</a>
                 </div>
                 <div class="footer-social__nav-menu">
                     <a class="footer-social__nav-menu-items" href="">Отзывы</a>
@@ -131,4 +131,4 @@
     </div>
 </section>
 </body>
-</html> 
+</html>
