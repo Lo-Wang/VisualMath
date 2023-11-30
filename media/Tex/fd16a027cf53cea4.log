@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=latex 2023.11.4)  13 NOV 2023 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=latex 2023.11.4)  27 NOV 2023 13:06
 entering extended mode
 **./media/Tex/fd16a027cf53cea4.tex
 (media/Tex/fd16a027cf53cea4.tex
@@ -1759,15 +1759,15 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 Preview: Tightpage 0 0 0 0
-[1] ("D:\Projects\Github projects\VisualMath\media\Tex\fd16a027cf53cea4.aux") )
- 
+[1] (D:\Projects\Manim\Project_animation\media\Tex\fd16a027cf53cea4.aux) ) 
 Here is how much of TeX's memory you used:
  16271 strings out of 492970
- 276227 string characters out of 3137623
+ 276207 string characters out of 3137623
  353279 words of memory out of 3000000
  20015 multiletter control sequences out of 15000+200000
  536492 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,2n,65p,354b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on "D:\Projects\Github projects\VisualMath\media\Tex\fd16a027cf5
-3cea4.dvi" (1 page, 1736 bytes).
+
+Output written on D:\Projects\Manim\Project_animation\media\Tex\fd16a027cf53cea
+4.dvi (1 page, 1736 bytes).
