@@ -38,57 +38,17 @@
             </nav>
         </header>
         <section class="second-sectione">
-            <div class="second-sectione__text-1">
-                <h2 class="second-sectione__algebra">Алгебра</h2>
-                <h3 class="second-sectione__algebra-h3">7 Класс</h3>
-                <ol>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава I. Выражения, тождества, уравнения</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава II. Функции</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава III. Степень с натуральным показателем</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава IV. Многочлены</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава V. Формулы сокращенного умножения</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава VI. Системы линейных уравнений</a></li>
-                </ol>
-                <h3 class="second-sectione__algebra-h3">8 Класс</h3>
-                <ol>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава I. Рациональные дроби</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава II. Квадратные корни</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава III. Квадратные уравнения</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава IV. Неравенства</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава V. Степень с целым показателем</a></li>
-                </ol>
-                <h3 class="second-sectione__algebra-h3">9 Класс</h3>
-                <ol>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава I. Функция</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава II. Уравнения и неравенства с одной переменной</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава III. Уравнения и неравенства с двумя переменными и их системы</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава IV. Прогрессии</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава V. Элементы комбинаторики и теории вероятностей</a></li>
-                </ol>
-            </div>
-            <div class="second-sectione__text-2">
-                <h2 class="second-sectione-geometry">Геометрия</h2>
-                <h3 class="second-sectione__geometry-h3">7 Класс</h3>
-                <ol>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава I. Начальные геометрические сведения</a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава II. Треугольники</a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава III. Параллельные прямые</a></li>
-                    <li class="second-sectione__geometry-chapter-li-1"><a class="second-sectione__geometry-chapter" href="">Глава IV. Соотношения между сторонами и углами треугольника</a></li>
-                </ol>
-                <h3 class="second-sectione__geometry-h3">8 Класс</h3>
-                <ol>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава I. Начальные геометрические сведения </a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава II. Треугольники </a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава III. Параллельные прямые</a></li>
-                    <li class="second-sectione__geometry-chapter-li-2"><a class="second-sectione__geometry-chapter" href="">Глава IV. Соотношения между сторонами и углами треугольника </a></li>
-                </ol>
-                <h3 class="second-sectione__geometry-h3">9 Класс</h3>
-                <ol>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава I. Начальные геометрические сведения</a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава II. Треугольники</a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава III. Параллельные прямые</a></li>
-                    <li class="second-sectione__geometry-chapter-li-3"><a class="second-sectione__geometry-chapter" href="">Глава IV. Соотношения между сторонами и углами треугольника</a></li>
-                </ol>
+            <div class="second-sectione__column">
+                <div class="second-sectione__algebra">
+                    <h2>Алгебра</h2>
+                    <div class="second-sectione__class" id="algebra-content"></div>
+                    <div id="algebra-content"></div>
+                </div>
+                <div class="second-sectione-geometry">
+                    <h2>Геометрия</h2>
+                    <div class="second-sectione__class geometry-content" id="geometry-content"></div>
+                    <div id="geometry-content"></div>
+                </div>
             </div>
         </section>
         <footer class="footer">
@@ -111,5 +71,6 @@
         </footer>
     </div>
 </section>
+<script src="{% static 'main/js/js.js' %}"></script>
 </body>
 </html> 

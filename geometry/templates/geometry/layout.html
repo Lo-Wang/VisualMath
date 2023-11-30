@@ -1,45 +1,41 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'main/css/homepage/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'main/icons/logo-1.svg' %}">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/src/icons/logo-1.svg">
     <title>VisualMath</title>
 </head>
 <body>
-<!--Основа основ-->
-<section class="main-section">
-    <!--Контейнер размера страницы-->
-    <div class="conteiner main-section__nav-container">
-        <!--Верхняя секция сайта-->
-        <header class="main-section__header">
-            <a href="{% url 'home' %}"><img class="main-section__header-logo" src="{% static 'main/icons/logo-3.svg' %}"
-                                            alt=""></a>
-            <nav>
-                <div class="navbar">
-                    <div class="dropdown">
-                        <button class="dropbtn"><a href="">алгебра</a></button>
-                    </div>
-                </div>
-                <div class="navbar-1">
-                    <div class="dropdown-1">
-                        <button class="dropbtn-1"><a href="">геометрия</a></button>
-                    </div>
-                </div>
-                <ul class="main-section__nav-menu">
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Отзывы</a>
-                    </li>
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Контакты</a>
-                    </li>
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">О нас</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+     <!--Основа основ-->
+        <section class="main-section">
+            <!--Контейнер размера страницы-->
+             <div class="conteiner main-section__nav-container">
+                 <!--Верхняя секция сайта-->
+                    <header class="main-section__header">
+                        <img class="main-section__header-logo" src="/src/icons/logo-3.svg" alt="">
+                        <nav>
+                            <div class="navbar">
+                                <div class="dropdown">
+                                  <button class="dropbtn"><a class="dropbtn__algebra" href="#">алгебра</a></button>
+                                </div>
+                              </div>
+                              <div class="navbar-1">
+                                <div class="dropdown-1">
+                                  <button class="dropbtn-1"><a class="dropbtn__geometry" href="#">геометрия</a></button>
+                                </div>
+                              </div>
+                        <ul class="main-section__nav-menu">
+                            <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Отзывы</a></li>
+                            <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Контакты</a></li>
+                            <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">О нас</a></li>
+                        </ul>
+                        <img class="main-section__header__line" src="/src/img/header.svg" alt="">
+                        </nav>
+                    </header>
         <main>
             {% block content %}
             {% endblock %}
