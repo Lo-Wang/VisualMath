@@ -1,5 +1,4 @@
-@import "normalizee.scss"
-@import "resets.scss"
+
  
 /* Параметры страницы */
 *
@@ -98,8 +97,6 @@ body
     margin-bottom: 50px
 .second-sectione__column
     display: grid
-    grid-template-columns: repeat(2, 1fr)
-    column-count: 2
     gap: 80px
     margin-bottom: 120px
 .second-sectione__class
@@ -108,7 +105,7 @@ body
     margin-bottom: 150px    
 .second-sectione__class h3 
     margin-bottom: 0
-.second-sectione__algebra
+.second-sectione__algebra-h2
     color: var(--tertiary-base, #82DAFF)
     flex-basis: calc(50% - 40px)
     font-size: 38px
@@ -153,6 +150,30 @@ body
     -webkit-transition: all 0.5s ease
     transition: all 0.5s ease
 .second-sectione__geometry-chapter:hover
+    color: #FFA782
+.second-sectione__algebra__dropdown-content a
+    display: block
+    padding: 8px
+    color: #fff
+.second-sectione__algebra__dropdown.active .second-sectione__algebra__dropdown-content 
+    display: block  
+.second-sectione__algebra__chapter-title
+    font-size: 26px
+    color: #fff
+    font-weight: 900
+    -webkit-transition: all 0.5s ease
+    transition: all 0.5s ease
+.second-sectione__algebra__chapter-title:hover
+    color: #FFA782
+.second-sectione__algebra__topic-name
+    text-decoration: none
+    font-size: 20px
+    font-weight: 600
+    color: #fdfdfd
+    line-height: 40px
+    -webkit-transition: all 0.5s ease
+    transition: all 0.5s ease
+.second-sectione__algebra__topic-name:hover
     color: #FFA782
 footer
     float: left
@@ -213,4 +234,3 @@ li:last-child
     margin-right: 0px
 .footer-social__nav-menu-items:hover
     color: #FFA782
-

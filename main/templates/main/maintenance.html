@@ -17,16 +17,17 @@
     <div class="conteiner main-section__nav-container">
         <!--Верхняя секция сайта-->
         <header class="main-section__header">
-            <img class="main-section__header-logo" src="{% static 'main/icons/logo-3.svg' %}" alt="">
+            <a href="{% url 'home' %}"><img class="main-section__header-logo" src="{% static 'main/icons/logo-3.svg' %}"
+                                            alt=""></a>
             <nav>
                 <div class="navbar">
                     <div class="dropdown">
-                        <button class="dropbtn"><a class="dropbtn__algebra" href="#">алгебра</a></button>
+                        <button class="dropbtn"><a class="dropbtn__algebra" href="#algebra-content">алгебра</a></button>
                     </div>
                 </div>
                 <div class="navbar-1">
                     <div class="dropdown-1">
-                        <button class="dropbtn-1"><a class="dropbtn__geometry" href="#">геометрия</a></button>
+                        <button class="dropbtn-1"><a class="dropbtn__geometry" href="#geometry-content">геометрия</a></button>
                     </div>
                 </div>
                 <ul class="main-section__nav-menu">
@@ -40,14 +41,84 @@
         <section class="second-sectione">
             <div class="second-sectione__column">
                 <div class="second-sectione__algebra">
-                    <h2>Алгебра</h2>
-                    <div class="second-sectione__class" id="algebra-content"></div>
-                    <div id="algebra-content"></div>
+                    <h2 class="second-sectione__algebra-h2" id="algebra-content">Алгебра</h2>
+                    <div class="second-sectione__algebra-h3">7 класс</div>
+                    <ol>
+                        {% for key,value in titles.algebra_7.chapters.items %}
+                            <div class="second-sectione__algebra__click" onclick="toggleDropdown()">
+                                <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
+                                    <ol>
+                                        {% for subchapter in value %}
+                                            <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
+                                        {% endfor %}
+                                    </ol>
+                                </li>
+                            </div>
+                        {% endfor %}
+                    </ol>
+                    <div class="second-sectione__algebra-h3">8 класс</div>
+                    <ol>
+                        {% for key,value in titles.algebra_8.chapters.items %}
+                            <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                    <div class="second-sectione__algebra-h3">9 класс</div>
+                    <ol>
+                        {% for key,value in titles.algebra_9.chapters.items %}
+                            <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
                 </div>
                 <div class="second-sectione-geometry">
-                    <h2>Геометрия</h2>
-                    <div class="second-sectione__class geometry-content" id="geometry-content"></div>
-                    <div id="geometry-content"></div>
+                    <h2 class="second-sectione__geometry-h2"  id="geometry-content">Геометрия</h2>
+                    <div class="second-sectione__geometry-h3">7 класс</div>
+                    <ol>
+                        {% for key,value in titles.geometry_7.chapters.items %}
+                            <li style="list-style-type: none"><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                    <div class="second-sectione__geometry-h3">8 класс</div>
+                    <ol>
+                        {% for key,value in titles.geometry_8.chapters.items %}
+                            <li style="list-style-type: none" ><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                    <div class="second-sectione__geometry-h3">9 класс</div>
+                    <ol>
+                        {% for key,value in titles.geometry_9.chapters.items %}
+                            <li style="list-style-type: none"><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
                 </div>
             </div>
         </section>

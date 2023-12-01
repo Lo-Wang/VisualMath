@@ -6,7 +6,7 @@ def index(request):
     return render(request, 'geometry/geometry_maintenance.html')
 
 
-def first_tema(request):
-    return render(request, "geometry/7 class/first_tema.html")
+def geometry_7_1_1(request):
+    return render(request, "geometry/7 class/geometry_7_1_1.html")
 
 
