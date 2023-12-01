@@ -17,16 +17,17 @@
     <div class="conteiner main-section__nav-container">
         <!--Верхняя секция сайта-->
         <header class="main-section__header">
-            <img class="main-section__header-logo" src="{% static 'main/icons/logo-3.svg' %}" alt="">
+            <a href="{% url 'home' %}"><img class="main-section__header-logo" src="{% static 'main/icons/logo-3.svg' %}"
+                                            alt=""></a>
             <nav>
                 <div class="navbar">
                     <div class="dropdown">
-                        <button class="dropbtn"><a class="dropbtn__algebra" href="#">алгебра</a></button>
+                        <button class="dropbtn"><a class="dropbtn__algebra" href="#algebra-content">алгебра</a></button>
                     </div>
                 </div>
                 <div class="navbar-1">
                     <div class="dropdown-1">
-                        <button class="dropbtn-1"><a class="dropbtn__geometry" href="#">геометрия</a></button>
+                        <button class="dropbtn-1"><a class="dropbtn__geometry" href="#geometry-content">геометрия</a></button>
                     </div>
                 </div>
                 <ul class="main-section__nav-menu">
@@ -38,57 +39,87 @@
             </nav>
         </header>
         <section class="second-sectione">
-            <div class="second-sectione__text-1">
-                <h2 class="second-sectione__algebra">Алгебра</h2>
-                <h3 class="second-sectione__algebra-h3">7 Класс</h3>
-                <ol>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава I. Выражения, тождества, уравнения</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава II. Функции</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава III. Степень с натуральным показателем</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава IV. Многочлены</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава V. Формулы сокращенного умножения</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="#">Глава VI. Системы линейных уравнений</a></li>
-                </ol>
-                <h3 class="second-sectione__algebra-h3">8 Класс</h3>
-                <ol>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава I. Рациональные дроби</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава II. Квадратные корни</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава III. Квадратные уравнения</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава IV. Неравенства</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава V. Степень с целым показателем</a></li>
-                </ol>
-                <h3 class="second-sectione__algebra-h3">9 Класс</h3>
-                <ol>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава I. Функция</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава II. Уравнения и неравенства с одной переменной</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава III. Уравнения и неравенства с двумя переменными и их системы</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава IV. Прогрессии</a></li>
-                    <li class="second-sectione__algebra-chapter-li"><a class="second-sectione__algebra-chapter" href="">Глава V. Элементы комбинаторики и теории вероятностей</a></li>
-                </ol>
-            </div>
-            <div class="second-sectione__text-2">
-                <h2 class="second-sectione-geometry">Геометрия</h2>
-                <h3 class="second-sectione__geometry-h3">7 Класс</h3>
-                <ol>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава I. Начальные геометрические сведения</a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава II. Треугольники</a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава III. Параллельные прямые</a></li>
-                    <li class="second-sectione__geometry-chapter-li-1"><a class="second-sectione__geometry-chapter" href="">Глава IV. Соотношения между сторонами и углами треугольника</a></li>
-                </ol>
-                <h3 class="second-sectione__geometry-h3">8 Класс</h3>
-                <ol>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава I. Начальные геометрические сведения </a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава II. Треугольники </a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава III. Параллельные прямые</a></li>
-                    <li class="second-sectione__geometry-chapter-li-2"><a class="second-sectione__geometry-chapter" href="">Глава IV. Соотношения между сторонами и углами треугольника </a></li>
-                </ol>
-                <h3 class="second-sectione__geometry-h3">9 Класс</h3>
-                <ol>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава I. Начальные геометрические сведения</a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава II. Треугольники</a></li>
-                    <li class="second-sectione__geometry-chapter-li"><a class="second-sectione__geometry-chapter" href="">Глава III. Параллельные прямые</a></li>
-                    <li class="second-sectione__geometry-chapter-li-3"><a class="second-sectione__geometry-chapter" href="">Глава IV. Соотношения между сторонами и углами треугольника</a></li>
-                </ol>
+            <div class="second-sectione__column">
+                <div class="second-sectione__algebra">
+                    <h2 class="second-sectione__algebra-h2" id="algebra-content">Алгебра</h2>
+                    <div class="second-sectione__algebra-h3">7 класс</div>
+                    <ol>
+                        {% for key,value in titles.algebra_7.chapters.items %}
+                            <div class="second-sectione__algebra__click" onclick="toggleDropdown()">
+                                <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
+                                    <ol>
+                                        {% for subchapter in value %}
+                                            <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
+                                        {% endfor %}
+                                    </ol>
+                                </li>
+                            </div>
+                        {% endfor %}
+                    </ol>
+                    <div class="second-sectione__algebra-h3">8 класс</div>
+                    <ol>
+                        {% for key,value in titles.algebra_8.chapters.items %}
+                            <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                    <div class="second-sectione__algebra-h3">9 класс</div>
+                    <ol>
+                        {% for key,value in titles.algebra_9.chapters.items %}
+                            <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+                <div class="second-sectione-geometry">
+                    <h2 class="second-sectione__geometry-h2"  id="geometry-content">Геометрия</h2>
+                    <div class="second-sectione__geometry-h3">7 класс</div>
+                    <ol>
+                        {% for key,value in titles.geometry_7.chapters.items %}
+                            <li style="list-style-type: none"><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                    <div class="second-sectione__geometry-h3">8 класс</div>
+                    <ol>
+                        {% for key,value in titles.geometry_8.chapters.items %}
+                            <li style="list-style-type: none" ><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                    <div class="second-sectione__geometry-h3">9 класс</div>
+                    <ol>
+                        {% for key,value in titles.geometry_9.chapters.items %}
+                            <li style="list-style-type: none"><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
+                                <ol>
+                                    {% for subchapter in value %}
+                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
+                                    {% endfor %}
+                                </ol>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
             </div>
         </section>
         <footer class="footer">
@@ -111,5 +142,6 @@
         </footer>
     </div>
 </section>
+<script src="{% static 'main/js/js.js' %}"></script>
 </body>
 </html> 
