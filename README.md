@@ -94,7 +94,17 @@ manim -pqh First_Sign_Equality_Triangles.py fset
 
 Интерактивная область реализуется с помощью canvas, html, css и js.
 
-Раздел все ещё в разработке...
+Файлы интерактивных областей находятся вместе с остальными ресурсными файлами в директории [static](https://github.com/Lo-Wang/VisualMath/tree/main/geometry/static/geometry), а именно в [js](https://github.com/Lo-Wang/VisualMath/tree/main/geometry/static/geometry/js)  (приведен пример с папкой "geometry")
+
+```
+Путь - VisualMath/tree/main/geometry/static/geometry/js
+```
+# Взаимодействие
+
+> [!CAUTION]
+> Раздел требует проверки и правки
+
+В данный момент существует наглядная схема разработки продукта VisualMath. 
 
   
 
