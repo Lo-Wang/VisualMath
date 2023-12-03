@@ -91,7 +91,8 @@ manim -pqh First_Sign_Equality_Triangles.py fset
 Название файла .mp4 соответствует названию класса из файлов .py.
 
 > [!NOTE]
-> Для создания анимаций используется библиотека Manim Community v0.17.3, ознакомится с ней можно на [сайте](https://www.manim.community/) или в [репозитории проекта](https://github.com/manimCommunity/manim).
+> Для создания анимаций используется библиотека Manim Community v0.17.3, ознакомится с ней
+> можно на [сайте](https://www.manim.community/) или в [репозитории проекта](https://github.com/manimCommunity/manim).
 
 # Интерактивная область
 
