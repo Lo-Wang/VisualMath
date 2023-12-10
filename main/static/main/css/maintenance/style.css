@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/* Параметры страницы */
 * {
   box-sizing: border-box;
 }
@@ -17,7 +15,7 @@ body {
 }
 
 .main-section {
-  min-height: 900px;
+  min-height: 1900px;
   overflow: hidden;
 }
 .main-section__nav-container {
@@ -134,7 +132,6 @@ body {
 
 .second-sectione__column {
   display: grid;
-  gap: 80px;
   margin-bottom: 120px;
 }
 
@@ -151,113 +148,72 @@ body {
 }
 
 .second-sectione__algebra-h2 {
-  color: #82DAFF;
+  color: var(--tertiary-base, #82DAFF);
   flex-basis: calc(50% - 40px);
   font-size: 38px;
   font-weight: 900;
   line-height: 130%;
   letter-spacing: -0.76px;
-}
-.second-sectione__geometry-h2 {
-  color: #FF82A2;
-  flex-basis: calc(50% - 40px);
-  font-size: 38px;
-  font-weight: 900;
-  line-height: 130%;
-  letter-spacing: -0.76px;
-}
-li::marker{
-  color: white;
 }
 
 .second-sectione__algebra-h3 {
-  color: #82DAFF;
+  color: var(--tertiary-base, #82DAFF);
   font-size: 30px;
   font-weight: 900;
   line-height: 130%;
   letter-spacing: -0.6px;
+  margin-bottom: 10px;
 }
-.second-sectione__algebra-chapter-title {
-  color: #F1F0F1;
-  font-size: 21px;
+
+.second-sectione__list {
+  color: #fff;
+  max-width: 850px;
+}
+
+.list__details {
+  font-size: 25px;
+  cursor: pointer;
+  list-style: none;
   font-weight: 400;
-  line-height: 150%;
-  text-decoration: none;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.second-sectione__algebra-chapter:hover{
-    color: #FFA782;
-  }
-.second-sectione-geometry {
-  color: #FF82A2;
-  flex-basis: calc(50% - 40px);
+
+.list__details:hover {
+  color: #FFA782;
+}
+
+.list__details-content {
+  padding: 0 32px;
+  font-size: 18px;
+}
+
+.details-content {
+  text-decoration: none;
+  color: #faf6f6;
   font-weight: 400;
+  font-size: 21px;
+  transition: all 0.5s ease;
+}
+
+.details-content:hover {
+  color: #FFA782;
+}
+
+.second-sectione__geometry-h2 {
+  color: var(--quaternary-base, #FF82A2);
+  flex-basis: calc(50% - 40px);
+  font-size: 38px;
+  font-weight: 900;
   line-height: 130%;
   letter-spacing: -0.76px;
 }
 
 .second-sectione__geometry-h3 {
-  color: #FF82A2;
+  color: var(--quaternary-base, #FF82A2);
   font-size: 30px;
   font-weight: 900;
   line-height: 130%;
   letter-spacing: -0.6px;
-}
-
-.second-sectione__geometry-chapter-title {
-  color: #F1F0F1;
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 150%;
-  text-decoration: none;
-  transition: all 0.5s ease;
-}
-
-.second-sectione__geometry-chapter:hover {
-  color: #FFA782;
-}
-.second-sectione__geometry__topic-name {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
-  line-height: 40px;
-  transition: all 0.5s ease;
-}
-
-.second-sectione__algebra__dropdown-content a {
-  display: block;
-  padding: 8px;
-  color: #fff;
-}
-
-.second-sectione__algebra__dropdown.active .second-sectione__algebra__dropdown-content {
-  display: block;
-}
-
-.second-sectione__algebra__chapter-title {
-  font-size: 26px;
-  color: #fff;
-  font-weight: 900;
-  transition: all 0.5s ease;
-}
-
-.second-sectione__algebra__chapter-title:hover {
-  color: #FFA782;
-}
-
-.second-sectione__algebra__topic-name {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
-  line-height: 40px;
-  transition: all 0.5s ease;
-}
-
-.second-sectione__algebra__topic-name:hover {
-  color: #FFA782;
 }
 
 footer {
@@ -267,7 +223,6 @@ footer {
 .footer-social {
   height: auto;
   margin: 0 auto;
-  padding-top: 135px;
 }
 
 .section-social::before {
