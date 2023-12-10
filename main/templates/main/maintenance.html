@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'main/css/maintenance/style.css' %}">
     <link rel="shortcut icon" href="{% static 'main/icons/logo-1.svg' %}">
-    <title>VisualMath</title>
+    <title>Оглавление</title>
 </head>
 <body>
 <!--Основа основ-->
@@ -43,82 +43,225 @@
                 <div class="second-sectione__algebra">
                     <h2 class="second-sectione__algebra-h2" id="algebra-content">Алгебра</h2>
                     <div class="second-sectione__algebra-h3">7 класс</div>
-                    <ol>
-                        {% for key,value in titles.algebra_7.chapters.items %}
-                            <div class="second-sectione__algebra__click" onclick="toggleDropdown()">
-                                <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
-                                    <ol>
-                                        {% for subchapter in value %}
-                                            <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
-                                        {% endfor %}
-                                    </ol>
-                                </li>
-                            </div>
-                        {% endfor %}
-                    </ol>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава I. Выражения, тождества, уравнения</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Прямая, отрезок, луч и угол</a></li>
+                            <li><a class="details-content" href="">Сравнение отрезков и углов</a></li>
+                            <li><a class="details-content" href="">Измерение отрезков</a></li>
+                            <li><a class="details-content" href="">Измерение углов</a></li>
+                            <li><a class="details-content" href="">Смежные и вертикальные углы</a></li>
+                            <li><a class="details-content" href="">Перпендикулярные прямые</a></li>
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава II. Функции</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Прямая, отрезок, луч и угол</a></li>
+                            <li><a class="details-content" href="">Сравнение отрезков и углов</a></li>
+                            <li><a class="details-content" href="">Измерение отрезков</a></li>
+                            <li><a class="details-content" href="">Измерение углов</a></li>
+                            <li><a class="details-content" href="">Смежные и вертикальные углы</a></li>
+                            <li><a class="details-content" href="">Перпендикулярные прямые</a></li>
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава III. Степень с натуральным показателем</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Прямая, отрезок, луч и угол</a></li>
+                            <li><a class="details-content" href="">Сравнение отрезков и углов</a></li>
+                            <li><a class="details-content" href="">Измерение отрезков</a></li>
+                            <li><a class="details-content" href="">Измерение углов</a></li>
+                            <li><a class="details-content" href="">Смежные и вертикальные углы</a></li>
+                            <li><a class="details-content" href="">Перпендикулярные прямые</a></li>
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава IV. Многочлены</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Прямая, отрезок, луч и угол</a></li>
+                            <li><a class="details-content" href="">Сравнение отрезков и углов</a></li>
+                            <li><a class="details-content" href="">Измерение отрезков</a></li>
+                            <li><a class="details-content" href="">Измерение углов</a></li>
+                            <li><a class="details-content" href="">Смежные и вертикальные углы</a></li>
+                            <li><a class="details-content" href="">Перпендикулярные прямые</a></li>
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава V. Формулы сокращенного умножения</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Прямая, отрезок, луч и угол</a></li>
+                            <li><a class="details-content" href="">Сравнение отрезков и углов</a></li>
+                            <li><a class="details-content" href="">Измерение отрезков</a></li>
+                            <li><a class="details-content" href="">Измерение углов</a></li>
+                            <li><a class="details-content" href="">Смежные и вертикальные углы</a></li>
+                            <li><a class="details-content" href="">Перпендикулярные прямые</a></li>
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава VI. Системы линейных уравнений</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Прямая, отрезок, луч и угол</a></li>
+                            <li><a class="details-content" href="">Сравнение отрезков и углов</a></li>
+                            <li><a class="details-content" href="">Измерение отрезков</a></li>
+                            <li><a class="details-content" href="">Измерение углов</a></li>
+                            <li><a class="details-content" href="">Смежные и вертикальные углы</a></li>
+                            <li><a class="details-content" href="">Перпендикулярные прямые</a></li>
+                        </div>
+                    </details>
                     <div class="second-sectione__algebra-h3">8 класс</div>
-                    <ol>
-                        {% for key,value in titles.algebra_8.chapters.items %}
-                            <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
-                                <ol>
-                                    {% for subchapter in value %}
-                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
-                                    {% endfor %}
-                                </ol>
-                            </li>
-                        {% endfor %}
-                    </ol>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава I. Рациональные дроби</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава II. Квадратные корни</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава III. Квадратные уравнения</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава IV. Неравенства</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава V. Степень с целым показателем</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
                     <div class="second-sectione__algebra-h3">9 класс</div>
-                    <ol>
-                        {% for key,value in titles.algebra_9.chapters.items %}
-                            <li style="list-style-type: none"><p class="second-sectione__algebra-chapter-title">{{ key }}</p>
-                                <ol>
-                                    {% for subchapter in value %}
-                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__algebra__topic-name">{{ subchapter }}</a></li>
-                                    {% endfor %}
-                                </ol>
-                            </li>
-                        {% endfor %}
-                    </ol>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава I. Функция</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава II. Уравнения и неравенства с одной переменной</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава III. Уравнения и неравенства с двумя переменными и их системы</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава IV. Прогрессии</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава V. Элементы комбинаторики и теории вероятностей</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
                 </div>
-                <div class="second-sectione-geometry">
-                    <h2 class="second-sectione__geometry-h2"  id="geometry-content">Геометрия</h2>
+                <div class="second-sectione__geometry">
+                    <h2 class="second-sectione__geometry-h2" id="geometry-content">Геометрия</h2>
                     <div class="second-sectione__geometry-h3">7 класс</div>
-                    <ol>
-                        {% for key,value in titles.geometry_7.chapters.items %}
-                            <li style="list-style-type: none"><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
-                                <ol>
-                                    {% for subchapter in value %}
-                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
-                                    {% endfor %}
-                                </ol>
-                            </li>
-                        {% endfor %}
-                    </ol>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава I. Начальные геометрические сведения</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="{% url 'geometry_7_1_1' %}">Прямая, отрезок, луч и угол</a></li>
+                            <li><a class="details-content" href="">Сравнение отрезков и углов</a></li>
+                            <li><a class="details-content" href="">Измерение отрезков</a></li>
+                            <li><a class="details-content" href="">Измерение углов</a></li>
+                            <li><a class="details-content" href="">Смежные и вертикальные углы</a></li>
+                            <li><a class="details-content" href="">Перпендикулярные прямые</a></li>
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава II. Треугольники</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Треугольники</a></li>
+                            <li><a class="details-content" href="">Первый признак равенства треугольников</a></li>
+                            <li><a class="details-content" href="">Медианы, биссектрисы и высоты треугольников</a></li>
+                            <li><a class="details-content" href="">Свойства равнобедренного треугольника</a></li>
+                            <li><a class="details-content" href="">Второй признак равенства треугольников</a></li>
+                            <li><a class="details-content" href="">Третий признак равенства треугольников</a></li>
+                            <li><a class="details-content" href="">Окружность</a></li>
+                            <li><a class="details-content" href="">Примеры задач на построение</a></li>
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава III. Параллельные прямые</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Признаки параллельности прямых</a></li>
+                            <li><a class="details-content" href="">Практические способы построения параллельных прямых</a></li>
+                            <li><a class="details-content" href="">Аксиома параллельных прямых</a></li>
+                            <li><a class="details-content" href="">Свойства параллельных прямых</a></li>
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава IV. Соотношения между сторонами и углами треугольника</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Сумма углов треугольника</a></li>
+                            <li><a class="details-content" href="">Соотношения между сторонами и углами треугольника</a></li>
+                            <li><a class="details-content" href="">Неравенство треугольника</a></li>
+                            <li><a class="details-content" href="">Прямоугольные треугольники и некоторые их свойства</a></li>
+                            <li><a class="details-content" href="">Признаки равенства прямоугольных треугольников</a></li>
+                            <li><a class="details-content" href="">Расстояние от точки до прямой. Расстояние между параллельными прямыми</a></li>
+                            <li><a class="details-content" href="">Построение треугольника по трем элементам</a></li>
+                        </div>
+                    </details>
                     <div class="second-sectione__geometry-h3">8 класс</div>
-                    <ol>
-                        {% for key,value in titles.geometry_8.chapters.items %}
-                            <li style="list-style-type: none" ><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
-                                <ol>
-                                    {% for subchapter in value %}
-                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
-                                    {% endfor %}
-                                </ol>
-                            </li>
-                        {% endfor %}
-                    </ol>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава V. Четырехугольники</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава VI. Площадь</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава VII. Подобные треугольники</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава VIII. Окружность</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
                     <div class="second-sectione__geometry-h3">9 класс</div>
-                    <ol>
-                        {% for key,value in titles.geometry_9.chapters.items %}
-                            <li style="list-style-type: none"><p class="second-sectione__geometry-chapter-title">{{ key }}</p>
-                                <ol>
-                                    {% for subchapter in value %}
-                                        <li><a href="{% url 'geometry_7_1_1' %}" class="second-sectione__geometry__topic-name">{{ subchapter }}</a></li>
-                                    {% endfor %}
-                                </ol>
-                            </li>
-                        {% endfor %}
-                    </ol>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава IX. Векторы</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава X. Метод координат</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава XI. Соотношение между сторонами и углами треугольника. Скалярное произведение векторов.</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава XII. Длина окружности и площадь круга</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава XIII. Движения</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
+                    <details class="second-sectione__list">
+                        <summary class="list__details">Глава XIV. Начальные сведения из стереометрии</summary>
+                        <div class="list__details-content">
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>

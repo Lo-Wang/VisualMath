@@ -488,6 +488,128 @@ body {
   margin-right: 20px;
 }
 
+.burger-checkbox {
+  float: left;
+  visibility: hidden;
+}
+
+.burger {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  float: left;
+  background: transparent;
+  width: 60px;
+  height: 26px;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #ffffff;
+  transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+}
+
+.burger::after {
+  bottom: 0;
+  transition: bottom 0.3s 0.15s, transform 0.3s;
+}
+
+.burger-checkbox:checked + .burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+}
+
+.burger-checkbox:checked + .burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s, transform 0.3s 0.15s;
+}
+
+.menu-list {
+  top: 300px;
+  left: 0;
+  position: absolute;
+  display: grid;
+  gap: 12px;
+  padding: 42px 0;
+  margin: 0;
+  background: #FFA782;
+  list-style-type: disc;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  width: 400px;
+}
+
+.menu-item {
+  font-weight: 600;
+  display: block;
+  padding: 8px;
+  color: #2e2e2e;
+  font-size: 18px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.menu-list-item {
+  color: #fff;
+  max-width: 850px;
+}
+
+.menu-item__details {
+  padding: 0px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.menu-item__details:hover {
+  color: #443D3E;
+}
+
+.list__details-content {
+  padding: 15px 32px;
+  font-size: 18px;
+}
+
+.details-content {
+  text-decoration: none;
+  color: #faf6f6;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+
+.details-content:hover {
+  color: #443D3E;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.burger-checkbox:checked ~ .menu-list {
+  transform: translateX(0);
+}
+
 .main-section__header__line {
   width: 1440px;
   margin-bottom: 50px;
@@ -501,8 +623,8 @@ body {
   color: #FF82A2;
   font-weight: 900;
   font-size: 30px;
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 h3 {
@@ -550,6 +672,7 @@ span {
 
 .third__section-line {
   width: 1440px;
+  height: 200px;
   margin-bottom: 50px;
 }
 

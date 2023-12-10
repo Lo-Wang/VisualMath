@@ -3,45 +3,93 @@
 {% block title %}
     Прямая, отрезок, луч и угол
 {% endblock %}
+{% block class_maintenance %}
+    <details class="menu-list-item">
+        <summary class="menu-item__details">Глава I. Начальные геометрические сведения</summary>
+        <div class="list__details-content">
+            <li><a class="details-content" href="{% url 'geometry_7_1_1' %}">Прямая, отрезок, луч и угол</a></li>
+            <li><a class="details-content" href="#">Сравнение отрезков и углов</a></li>
+            <li><a class="details-content" href="#">Измерение отрезков</a></li>
+            <li><a class="details-content" href="#">Измерение углов</a></li>
+            <li><a class="details-content" href="#">Смежные и вертикальные углы</a></li>
+            <li><a class="details-content" href="#">Перпендикулярные прямые</a></li>
+        </div>
+    </details>
+    <details class="menu-list-item">
+        <summary class="menu-item__details">Глава II. Треугольники</summary>
+        <div class="list__details-content">
+            <li><a class="details-content" href="#">Треугольники</a></li>
+            <li><a class="details-content" href="#">Первый признак равенства треугольников</a></li>
+            <li><a class="details-content" href="#">Медианы, биссектрисы и высоты треугольников</a></li>
+            <li><a class="details-content" href="#">Свойства равнобедренного треугольника</a></li>
+            <li><a class="details-content" href="#">Второй признак равенства треугольников</a></li>
+            <li><a class="details-content" href="#">Третий признак равенства треугольников</a></li>
+            <li><a class="details-content" href="#">Окружность</a></li>
+            <li><a class="details-content" href="#">Примеры задач на построение</a></li>
+        </div>
+    </details>
+    <details class="menu-list-item">
+        <summary class="menu-item__details">Глава III. Параллельные прямые</summary>
+        <div class="list__details-content">
+            <li><a class="details-content" href="#">Признаки параллельности прямых</a></li>
+            <li><a class="details-content" href="#">Практические способы построения параллельных прямых</a></li>
+            <li><a class="details-content" href="#">Аксиома параллельных прямых</a></li>
+            <li><a class="details-content" href="#">Свойства параллельных прямых</a></li>
+        </div>
+    </details>
+    <details class="menu-list-item">
+        <summary class="menu-item__details">Глава IV. Соотношения между сторонами и углами треугольника</summary>
+        <div class="list__details-content">
+            <li><a class="details-content" href="#">Сумма углов треугольника</a></li>
+            <li><a class="details-content" href="#">Соотношения между сторонами и углами треугольника</a></li>
+            <li><a class="details-content" href="#">Неравенство треугольника</a></li>
+            <li><a class="details-content" href="#">Прямоугольные треугольники и некоторые их свойства</a></li>
+            <li><a class="details-content" href="#">Признаки равенства прямоугольных треугольников</a></li>
+            <li><a class="details-content" href="#">Расстояние от точки до прямой. Расстояние между параллельными прямыми</a></li>
+            <li><a class="details-content" href="#">Построение треугольника по трем элементам</a></li>
+        </div>
+    </details>
+{% endblock %}
 {% block content %}
-<section class="second__section">
-    <h2 class="second__section-heading">Прямая, отрезок, луч и угол</h2>
-    <h3>Точка</h3>
-    <p>Точка — это геометрическая фигура, которая является основой для всех геометрических фигур. У точки нет размера и ее нельзя разделить на несколько частей.
-        <li class="second__section-paragraph">Точка обозначается <span>большой</span> латинской буквой. Несколько точек обозначают разными буквами, чтобы их различать.</li> </p>
-    <h3>Прямая</h3>
-    <p>Прямая – это бесконечное количество точек, расположенных на одной линии, которая не скругляется, не имеет неровностей и углов. Прямая не имеет ни начала, ни конца, ее можно продлить в обе стороны.
-        Прямые обозначают <span>малыми</span> латинскими буквами.
-        Через одну точку можно провести сколько угодно прямых линий. Через любые две точки можно провести прямую, и притом только одну.
-        Прямую, на которой отмечены две точки, например А и В, иногда обозначают двумя буквами: АВ или ВА. Для краткости вместо слов «точка А лежит на прямой а» используют запись А ∈ а, а вместо слов «точка В не лежит на прямой а» — запись В ∉ а.</p>
-    <h3>Луч</h3>
-    <p>Луч - это часть прямой, состоящая из данной точки (начало луча) и всех точек, лежащих по одну сторону от неё.
-        Луч обозначают малой латинской буквой, или двумя большими латинскими буквами, первая из которых обозначает начало луча, а вторая — любую точку на луче.</p>
-    <h3>Отрезок</h3>
-    <p>Отрезок – это часть прямой, ограниченная двумя точками. Точки, ограничивающие отрезок, называются его концами.
-        На видео изображён отрезок с концами А и В. Такой отрезок обозначается АВ или ВА. Отрезок АВ содержит точки А и В и все точки прямой АВ, лежащие между А и В.</p>
-    <h3>Угол</h3>
-    <p>Угол — это геометрическая фигура, состоящая из точки и двух лучей, которые исходят из этой точки. Лучи – это стороны угла, а их общее начало — это вершина угла.
-        Угол обозначают так: ∠BAC, или ∠a.</p>
-    <h3>Треугольник</h3>
-    <p class="second__section-paragraph">Треугольник - это геометрическая фигура, образованная тремя отрезками, которые соединяют три точки, не лежащие на одной прямой. Эта фигура имеет три стороны и три угла.</p>
-</section>
-<section class="conteiner__video">
-    <video class="conteiner__video__video" disablePictureInPicture autoplay loop muted playsinline src="{% static 'geometry/video/1.mp4' %}"></video>
-</section>
-<section class="third__section-sandbox">
-    <img class="third__section-line" src="{% static 'geometry/img/sandbox.svg' %}" alt="">
-    <div class="sandbox">
-        <canvas></canvas>
-        <!--<div class="third__section-sandbox-button">
-            <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
-            <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
-            <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
-            <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
-        </div>-->
-    </div>
-</section>
-<button class="previous-topic"><a class="button-text" href="#"> <img src="/src/icons/CaretLeft.png" alt=""> Предыдущая тема</a></button>
-<button class="next-topic"><a class="button-text" href="#">Следующая тема <img class="arrow" src="/src/icons/CaretLeft.png" alt=""></a></button>
-<script src="{% static 'geometry/js/java_script.js'%}"></script>
+    <section class="second__section">
+        <h2 class="second__section-heading">Прямая, отрезок, луч и угол</h2>
+        <h3>Точка</h3>
+        <p>Точка — это геометрическая фигура, которая является основой для всех геометрических фигур. У точки нет размера и ее нельзя разделить на несколько частей.
+            <li class="second__section-paragraph">Точка обозначается <span>большой</span> латинской буквой. Несколько точек обозначают разными буквами, чтобы их различать.</li> </p>
+        <h3>Прямая</h3>
+        <p>Прямая – это бесконечное количество точек, расположенных на одной линии, которая не скругляется, не имеет неровностей и углов. Прямая не имеет ни начала, ни конца, ее можно продлить в обе стороны.
+            Прямые обозначают <span>малыми</span> латинскими буквами.
+            Через одну точку можно провести сколько угодно прямых линий. Через любые две точки можно провести прямую, и притом только одну.
+            Прямую, на которой отмечены две точки, например А и В, иногда обозначают двумя буквами: АВ или ВА. Для краткости вместо слов «точка А лежит на прямой а» используют запись А ∈ а, а вместо слов «точка В не лежит на прямой а» — запись В ∉ а.</p>
+        <h3>Луч</h3>
+        <p>Луч - это часть прямой, состоящая из данной точки (начало луча) и всех точек, лежащих по одну сторону от неё.
+            Луч обозначают малой латинской буквой, или двумя большими латинскими буквами, первая из которых обозначает начало луча, а вторая — любую точку на луче.</p>
+        <h3>Отрезок</h3>
+        <p>Отрезок – это часть прямой, ограниченная двумя точками. Точки, ограничивающие отрезок, называются его концами.
+            На видео изображён отрезок с концами А и В. Такой отрезок обозначается АВ или ВА. Отрезок АВ содержит точки А и В и все точки прямой АВ, лежащие между А и В.</p>
+        <h3>Угол</h3>
+        <p>Угол — это геометрическая фигура, состоящая из точки и двух лучей, которые исходят из этой точки. Лучи – это стороны угла, а их общее начало — это вершина угла.
+            Угол обозначают так: ∠BAC, или ∠a.</p>
+        <h3>Треугольник</h3>
+        <p class="second__section-paragraph">Треугольник - это геометрическая фигура, образованная тремя отрезками, которые соединяют три точки, не лежащие на одной прямой. Эта фигура имеет три стороны и три угла.</p>
+    </section>
+    <section class="conteiner__video">
+        <video class="conteiner__video__video" disablePictureInPicture autoplay loop muted playsinline src="{% static 'geometry/vid/7 class/7.1.1.mp4' %}"></video>
+    </section>
+    <section class="third__section-sandbox">
+        <img class="third__section-line" src="{% static 'geometry/img/sandbox.svg' %}" alt="">
+        <div class="sandbox">
+            <canvas></canvas>
+            <!--<div class="third__section-sandbox-button">
+                <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+            </div>-->
+        </div>
+    </section>
+    <script src="{% static 'geometry/js/java_script.js'%}"></script>
+{% endblock %}
+{% block previous_topic %}
+    {% url "maintenance" %}
 {% endblock %}
