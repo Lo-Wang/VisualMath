@@ -4,7 +4,7 @@ class st(MovingCameraScene):
     def construct(self):
         intro_text = Text("Площадь треугольника").scale(1.2)
 
-        info_text = Tex(r"Докажем что - $S$$_\triangle$$_A$$_B$$_C$$_D$ = $\frac{BH * AD}{2}$") 
+        info_text = Tex(r"Докажем что - $S$$_\triangle$$_A$$_B$$_D$ = $\frac{BH * AD}{2}$") 
         info_text_1 = Tex(r"Так как диагональ в парралелограмме \\ делит его на два равных треугольника").move_to(np.array([0,-3,0]))
         info_text_2 = Tex(r"То делится и площадь на две равные части").move_to(np.array([0,-3,0]))
         info_text_3 = Tex(r"Таким образом, площадь треугольника - половина площади парралелограмма \\ $S_A$$_B$$_D$ = $\frac{BH * AD}{2}$").move_to(np.array([0,-3,0]))
