@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'algebra/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'algebra/icons/logo-1.svg' %}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<!--Основа основ-->
+<section class="main-section">
+    <!--Контейнер размера страницы-->
+    <div class="conteiner main-section__nav-container">
+        <!--Верхняя секция сайта-->
+        <header class="main-section__header">
+            <a href="{% url 'home' %}"><img class="main-section__header-logo"
+                                            src="{% static 'algebra/icons/logo-3.svg' %}"
+                                            alt=""></a>
+            <nav>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn"><a class="dropbtn__algebra"
+                                                   href="{% url 'maintenance' %}#algebra-content">алгебра</a></button>
+                    </div>
+                </div>
+                <div class="navbar-1">
+                    <div class="dropdown-1">
+                        <button class="dropbtn-1"><a class="dropbtn__geometry"
+                                                     href="{% url 'maintenance' %}#geometry-content">геометрия</a>
+                        </button>
+                    </div>
+                </div>
+                <ul class="main-section__nav-menu">
+                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Отзывы</a>
+                    </li>
+                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Контакты</a>
+                    </li>
+                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items"
+                                                             href="{% url 'about' %}">О нас</a></li>
+                </ul>
+                <div class="main-section__header__hamburger-line">
+                    <img class="main-section__header__line" src="{% static 'algebra/img/headers/header_1.svg' %}"
+                         alt="">
+                </div>
+            </nav>
+        </header>
+        <section class="second__section">
+            <div class="hamburger">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
+                <ul class="menu-list">
+                    <details class="menu-list-item">
+                        <summary class="menu-item__details">Глава I. Выражения, тождества, уравнения</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Числовые выражения</a></li>
+                            <li><a class="details-content" href="">Выражения с переменными</a></li>
+                            <li><a class="details-content" href="">Сравнение значений выражений</a></li>
+                            <li><a class="details-content" href="">Свойства действий над числами</a></li>
+                            <li><a class="details-content" href="">Тождества. Тождественные преобразования выражений</a>
+                            </li>
+                        </div>
+                    </details>
+                    <details class="menu-list-item">
+                        <summary class="menu-item__details">Глава II. Функции</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#1">Координатная прямая.
+                                Координатная плоскость</a></li>
+                            <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#2">Что такое функция?</a></li>
+                            <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#3">Вычисление значений функции
+                                по формуле</a></li>
+                            <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#4">График функции</a></li>
+                            <li><a class="details-content" href="">Прямая пропорциональность и ее график</a></li>
+                            <li><a class="details-content" href="">Линейная функция и ее график</a></li>
+                        </div>
+                    </details>
+                    <details class="menu-list-item">
+                        <summary class="menu-item__details">Глава III. Степень с натуральным показателем</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Определение степени с натуральным показателем</a>
+                            </li>
+                            <li><a class="details-content" href="">Умножение и деление степеней</a></li>
+                            <li><a class="details-content" href="">Возведение в степень произведения и степени</a></li>
+                            <li><a class="details-content" href="">Одночлен и его стандартный вид</a></li>
+                            <li><a class="details-content" href="">Умножение одночленов</a></li>
+                            <li><a class="details-content" href="">Возведение одночлена в степень</a></li>
+                            <li><a class="details-content" href="">Функции у=х^2 и у=х^3</a></li>
+                        </div>
+                    </details>
+                    <details class="menu-list-item">
+                        <summary class="menu-item__details">Глава IV. Многочлены</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Многочлен и его стандартный вид</a></li>
+                            <li><a class="details-content" href="">Сложение и вычитание многочленов</a></li>
+                            <li><a class="details-content" href="">Умножение одночлена на многочлен</a></li>
+                            <li><a class="details-content" href="">Вынесение общего множителя за скобки</a></li>
+                            <li><a class="details-content" href="">Умножение многочлена на многочлен</a></li>
+                            <li><a class="details-content" href="">Разложение многочлена на множители способом
+                                группировки</a></li>
+                        </div>
+                    </details>
+                    <details class="menu-list-item">
+                        <summary class="list__details">Глава V. Формулы сокращенного умножения</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Возведение в квадрат и в куб суммы и разности двух
+                                выражений</a></li>
+                            <li><a class="details-content" href="">Разложение на множители с помощью формул квадрата
+                                суммы и квадрата разности</a></li>
+                            <li><a class="details-content" href="">Умножение разности двух выражение на их сумму</a>
+                            </li>
+                            <li><a class="details-content" href="">Разложение разности квадратов на множители</a></li>
+                            <li><a class="details-content" href="">Разложение на множители суммы и разности кубов</a>
+                            </li>
+                            <li><a class="details-content" href="">Преобразование целого выражения в многочлен</a></li>
+                            <li><a class="details-content" href="">Применение различных способов для разложения на
+                                множители</a></li>
+                        </div>
+                    </details>
+                    <details class="menu-list-item">
+                        <summary class="menu-item__details">Глава VI. Системы линейных уравнений</summary>
+                        <div class="list__details-content">
+                            <li><a class="details-content" href="">Линейные уравнения с двумя переменными</a></li>
+                            <li><a class="details-content" href="">График линейного уравнения с двумя переменными</a>
+                            </li>
+                            <li><a class="details-content" href="">Системы линейных уравнений с двумя переменными</a>
+                            </li>
+                            <li><a class="details-content" href="">Способ подстановки</a></li>
+                            <li><a class="details-content" href="">Способ сложения</a></li>
+                        </div>
+                    </details>
+                </ul>
+            </div>
+            {% block content %}
+            {% endblock %}
+            <button class="previous-topic"><a class="button-text" href="{% block previous_topic %} {% endblock %}"> <img
+                    src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""> Предыдущая тема</a></button>
+            <button class="next-topic"><a class="button-text" href="{% block next_topic %} {% endblock %}">Следующая
+                тема <img class="arrow" src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""></a></button>
+        </section>
+        <footer class="footer">
+            <nav class="footer-social">
+                <img class="footer-social__logo" src="{% static 'main/icons/logo-3.svg' %}" alt="">
+                <div class="footer-social__connection">
+                    <img class="footer-social-img" src="{% static 'main/icons/social-icons.png' %}" alt="">
+                    <a class="footer-social__telegram" href="https://t.me/Sv_allmight" target="_blank">@Sv_allmight -
+                        Александр Свечников</a>
+                    <img class="footer-social-img" src="{% static 'main/icons/social-icons.png' %}" alt="">
+                    <a class="footer-social__telegram" href="https://t.me/richmenaft" target="_blank">@richmenaft -
+                        Денис Огородов</a>
+                </div>
+                <div class="footer-social__nav-menu">
+                    <a class="footer-social__nav-menu-items" href="">Отзывы</a>
+                    <a class="footer-social__nav-menu-items" href="">Контакты</a>
+                    <a class="footer-social__nav-menu-items" href="">О нас</a>
+                </div>
+            </nav>
+        </footer>
+    </div>
+</section>
+</body>
+</html>

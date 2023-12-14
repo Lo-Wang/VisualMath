@@ -1,0 +1,40 @@
+{% extends 'geometry/7 class/layout.html' %}
+{% load static %}
+{% block title %}
+    Координатная прямая
+{% endblock %}
+{% block content %}
+    <section class="second-sectione">
+        <h2 class="second-sectione__text" id="1">Координатная прямая. Координатная плоскость</h2>
+        <h3 class="second-sectione__heading">Координатная прямая</h3>
+        <p class="second-sectione__paragraph"> Это прямая с выбранными на ней началом отсчета, направлением и единичным
+            отрезком. Число, показывающее положение точки на прямой назвается координатой точки.</p>
+        <div class="img">
+            <img class="second-sectione__img" src="{% static '/algebra/img/7_2_1-4/Group 679.svg' %}" alt="">
+        </div>
+    </section>
+    <section class="third__section">
+        <h3 class="third__section__heading">Координатная плоскость</h3>
+        <p class="third__section__paragraph">Это прямоугольная система координат, состоящая из двух взаимно
+            перпендикулярных осей, имеющих направление, начало отсчета и единичные отрезки. Одна из осей называется осью
+            абсцисс (ось х), а другая - осью ординат (ось О). Начало координат - это точка O, которая является точкой
+            пересечения осей координат. Каждая точка на плоскости имеет свои координаты, которые обозначаются парой
+            чисел (x; y) и определяются как расстояние от точки до оси х и у.</p>
+        <div class="img">
+            <img src="{% static '/algebra/img/7_2_1-4/Group 680.svg' %}" alt="">
+        </div>
+    </section>
+    <section class="four__section">
+        <div class="four__section-video">
+            <video class="video" disablePictureInPicture autoplay loop muted playsinline src="{% static '/algebra/vid/7 class/7.2.1.Graph_and_function.mp4' %}"></video>
+        </div>
+        <div class="sandbox">
+            <img class="third__section-line" src="{% static '/algebra/img/sandbox.svg' %}" alt="">
+            <canvas></canvas>
+        </div>
+    </section>
+    <script src="{% static 'algebra/js/7 class/java_script.js' %}"></script>
+{% endblock %}
+{% block previous_topic %}
+    {% url "maintenance" %}
+{% endblock %}

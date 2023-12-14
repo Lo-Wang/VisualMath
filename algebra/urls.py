@@ -3,6 +3,5 @@ from . import views
 # При переходе по адресу admin/ будет открываться приложение admin
 # (панель администратора, установлена по умолчанию в любом Джанго проекте)
 urlpatterns = [
-    path('', views.index, name='algebra_maintenance'),
-    path('first_tema', views.first_tema, name='first_tema'),
+    path('7_class/1_chapter/1_lesson', views.algebra_7_2_1__4, name='algebra_7_2_1-4'),
 ]
