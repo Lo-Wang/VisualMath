@@ -1,0 +1,86 @@
+{% extends 'algebra/7 class/layout.html' %}
+{% load static %}
+{% block advanced_css %}
+    <link rel="stylesheet" href="{% static 'algebra/css/sandboxes/sandbox_7_1_1-4.css' %}">
+{% endblock %}
+
+{% block title %}
+    Координатная прямая
+{% endblock %}
+{% block content %}
+    <section class="second-sectione">
+        <h2 class="second-sectione__text" id="1">Координатная прямая. Координатная плоскость</h2>
+        <h3 class="second-sectione__heading">Координатная прямая</h3>
+        <p class="second-sectione__paragraph"> Это прямая с выбранными на ней началом отсчета, направлением и единичным
+            отрезком. Число, показывающее положение точки на прямой называется координатой точки.</p>
+        <div class="img">
+            <img class="second-sectione__img" src="{% static '/algebra/img/7_2_1-4/Group 679.svg' %}" alt="">
+        </div>
+    </section>
+    <section class="third__section">
+        <h3 class="third__section__heading">Координатная плоскость</h3>
+        <p class="third__section__paragraph">Это прямоугольная система координат, состоящая из двух взаимно
+            перпендикулярных осей, имеющих направление, начало отсчета и единичные отрезки. Одна из осей называется осью
+            абсцисс (ось х), а другая - осью ординат (ось О). Начало координат - это точка O, которая является точкой
+            пересечения осей координат. Каждая точка на плоскости имеет свои координаты, которые обозначаются парой
+            чисел (x; y) и определяются как расстояние от точки до оси х и у.</p>
+        <div class="img">
+            <img src="{% static '/algebra/img/7_2_1-4/Group 680.svg' %}" alt="">
+        </div>
+    </section>
+    <section class="second-sectione">
+        <h2 class="second-sectione__text" id="2">Что такое функция?</h2>
+        <p class="second-sectione__paragraph">На практике часто встречаюся зависимости между различными величинами.
+            Например, площадь круга зависит от его радиуса, объем прямоугольного параллелепипеда зависит от его длины,
+            ширины и высоты, выполненная работа зависит от производительности и времени. Все это примеры функций. Дальше
+            будут изучаться зависимости между двумя величинами.</p>
+        <h3 class="second-sectione__heading">Функция</h3>
+        <p class="second-sectione__paragraph-p"> Это правило, которое ставит в соответствие каждому значению независимой переменной (обычно обозначаемой как x) ровно одно значение зависимой переменной (обычно обозначаемой как y). Независимые переменные принадлежат области определения функции, а зависимые – множеству значений.
+            Примеры функций:
+            1. Зависимость пути от времени выражается формулой:
+            s = vt,
+            где t – время, v – скорость движения, а s – пройденный путь. Пусть скорость мотоцикла = 80 км/ч. Для различных значений переменной t, где t > 0, можно найти соответствующее значение s:
+            если t = 0,5 ч, то s = 80∙0,5 = 40 км
+            если t = 2 ч, то s = 80∙2 = 160 км
+            2. Площадь квадрата вычисляется по формуле S = а2, где a – сторона квадрата (независимая переменная), S –
+            площадь квадрата (зависимая переменная):
+            а = 4, S = 42 = 16.
+            а = 0,08, S = 0,082 = 0,0064.</p>
+    </section>
+    <section class="second-sectione">
+    <h2 class="second-sectione__text" id="3">График функции и вычисление его значений</h2>
+                <p class="second-sectione__paragraph-p"> 
+                    Пусть функция задана формулой y = 2x+1, где -2 ≤ x ≤ 2. Найдем значения у, соответствующие значениям х и результаты вычислений запишем в виде таблицы, в верхней строке будут значения x , а в нижней – значения функции y.
+                    Найдём значения у по x:
+                    если х = -2, то у = 2∙(-2)+1 =-3; 
+                    если х = -1, то у = 2∙(-1)+1 = -1 и т. д.</p>
+                    <img class="img-4" src="{% static '/algebra/img/7_2_1-4/Group 681.svg'%}" alt="">
+    <p class="second-sectione__paragraph-p">Теперь построим график функции в координатной плоскости по точкам:</p>
+            </section>
+    <section class="four__section">
+        <div class="four__section-video">
+            <video class="video" disablePictureInPicture autoplay loop muted playsinline
+                   src="{% static '/algebra/vid/7 class/7.2.1.Graph_and_function.mp4' %}"></video>
+        </div>
+      <!--   <section class="third__section-sandbox">
+        <img class="third__section-line" src="{% static '/algebra/img/sandbox.svg' %}" alt="">
+        <p class="third__section-paragraph">
+        <p class="third__section-p">Узнай больше о треугольниках и поэкспериментируй с ними здесь. </p>
+        <p class="third__section-pp">Они могут вращаться, так что ты сможешь изучить их со всех сторон. </p>
+        </p>
+        <div class="sandbox">
+            <canvas></canvas>
+          <div class="third__section-sandbox-button">
+          <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+          <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+          <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+          <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+        </div>
+        </div> -->
+    </section>
+    </section>
+    <script src="{% static 'algebra/js/7 class/java_script.js' %}"></script>
+{% endblock %}
+{% block previous_topic %}
+    {% url "maintenance" %}
+{% endblock %}
