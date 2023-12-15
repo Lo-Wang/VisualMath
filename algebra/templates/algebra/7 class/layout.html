@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'algebra/css/style.css' %}">
+    {% block advanced_css %}
+    {% endblock %}
     <link rel="shortcut icon" href="{% static 'algebra/icons/logo-1.svg' %}">
     <title>{% block title %} {% endblock %}</title>
 </head>
@@ -34,7 +36,7 @@
                     </div>
                 </div>
                 <ul class="main-section__nav-menu">
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Отзывы</a>
+                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="https://forms.yandex.ru/cloud/657c1e80f47e73077fa019c0/">Отзывы</a>
                     </li>
                     <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Контакты</a>
                     </li>
@@ -42,7 +44,7 @@
                                                              href="{% url 'about' %}">О нас</a></li>
                 </ul>
                 <div class="main-section__header__hamburger-line">
-                    <img class="main-section__header__line" src="{% static 'algebra/img/headers/header_1.svg' %}"
+                    <img class="main-section__header__line" src="{% static 'algebra/img/header.svg' %}"
                          alt="">
                 </div>
             </nav>
@@ -69,9 +71,7 @@
                             <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#1">Координатная прямая.
                                 Координатная плоскость</a></li>
                             <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#2">Что такое функция?</a></li>
-                            <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#3">Вычисление значений функции
-                                по формуле</a></li>
-                            <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#4">График функции</a></li>
+                            <li><a class="details-content" href="{% url 'algebra_7_2_1-4' %}#3">График функции и вычисление его значений</a></li>
                             <li><a class="details-content" href="">Прямая пропорциональность и ее график</a></li>
                             <li><a class="details-content" href="">Линейная функция и ее график</a></li>
                         </div>
@@ -102,7 +102,7 @@
                         </div>
                     </details>
                     <details class="menu-list-item">
-                        <summary class="list__details">Глава V. Формулы сокращенного умножения</summary>
+                        <summary class="menu-item__details">Глава V. Формулы сокращенного умножения</summary>
                         <div class="list__details-content">
                             <li><a class="details-content" href="">Возведение в квадрат и в куб суммы и разности двух
                                 выражений</a></li>
@@ -135,25 +135,25 @@
             {% block content %}
             {% endblock %}
             <button class="previous-topic"><a class="button-text" href="{% block previous_topic %} {% endblock %}"> <img
-                    src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""> Предыдущая тема</a></button>
+                    src="{% static 'algebra/icons/CaretLeft.png' %}" alt=""> Предыдущая тема</a></button>
             <button class="next-topic"><a class="button-text" href="{% block next_topic %} {% endblock %}">Следующая
-                тема <img class="arrow" src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""></a></button>
+                тема <img class="arrow" src="{% static 'algebra/icons/CaretLeft.png' %}" alt=""></a></button>
         </section>
         <footer class="footer">
             <nav class="footer-social">
-                <img class="footer-social__logo" src="{% static 'main/icons/logo-3.svg' %}" alt="">
+                <img class="footer-social__logo" src="{% static 'algebra/icons/logo-3.svg' %}" alt="">
                 <div class="footer-social__connection">
-                    <img class="footer-social-img" src="{% static 'main/icons/social-icons.png' %}" alt="">
+                    <img class="footer-social-img" src="{% static 'algebra/icons/social-icons.png' %}" alt="">
                     <a class="footer-social__telegram" href="https://t.me/Sv_allmight" target="_blank">@Sv_allmight -
                         Александр Свечников</a>
-                    <img class="footer-social-img" src="{% static 'main/icons/social-icons.png' %}" alt="">
+                    <img class="footer-social-img" src="{% static 'algebra/icons/social-icons.png' %}" alt="">
                     <a class="footer-social__telegram" href="https://t.me/richmenaft" target="_blank">@richmenaft -
                         Денис Огородов</a>
                 </div>
                 <div class="footer-social__nav-menu">
-                    <a class="footer-social__nav-menu-items" href="">Отзывы</a>
+                    <a class="footer-social__nav-menu-items" href="https://forms.yandex.ru/cloud/657c1e80f47e73077fa019c0/">Отзывы</a>
                     <a class="footer-social__nav-menu-items" href="">Контакты</a>
-                    <a class="footer-social__nav-menu-items" href="">О нас</a>
+                    <a class="footer-social__nav-menu-items" href="{% url 'about' %}">О нас</a>
                 </div>
             </nav>
         </footer>
