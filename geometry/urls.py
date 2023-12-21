@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     path('7_class/1_chapter/1_lesson', views.geometry_7_1_1, name='geometry_7_1_1'),
     path('7_class/2_chapter/1_lesson', views.geometry_7_2_1, name='geometry_7_2_1'),
+    path('7_class/2_chapter/2_lesson', views.geometry_7_2_2, name='geometry_7_2_2'),
 ]

@@ -34,8 +34,8 @@
                                                              href="{% url 'about' %}">О нас</a>
                     </li>
                 </ul>
-                {% block header %}
-                {% endblock %}
+                <img class="main-section__header-img" src="{% static 'geometry/img/header.svg' %}"
+                         alt="">
             </nav>
         </header>
         <section class="content__section">
@@ -59,7 +59,7 @@
                         <summary class="menu-item__summary">Глава II. Треугольники</summary>
                         <div class="list__details-content">
                             <li><a class="details-content" href="{% url 'geometry_7_2_1' %}">Треугольники</a></li>
-                            <li><a class="details-content" href="#">Первый признак равенства треугольников</a></li>
+                            <li><a class="details-content" href="{% url 'geometry_7_2_2' %}">Первый признак равенства треугольников</a></li>
                             <li><a class="details-content" href="#">Медианы, биссектрисы и высоты треугольников</a></li>
                             <li><a class="details-content" href="#">Свойства равнобедренного треугольника</a></li>
                             <li><a class="details-content" href="#">Второй признак равенства треугольников</a></li>
@@ -110,7 +110,9 @@
         </section>
         <footer class="footer">
             <nav class="footer-social">
-                <img class="footer-social__logo" src="{% static 'main/icons/logo-3.svg' %}" alt="">
+                <a href="{% url 'home' %}"><img class="footer-social__logo"
+                                            src="{% static 'geometry/icons/logo-3.svg' %}"
+                                            alt=""></a>
                 <div class="footer-social__connection">
                     <img class="footer-social-img" src="{% static 'main/icons/social-icons.png' %}" alt="">
                     <a class="footer-social__telegram" href="https://t.me/Sv_allmight" target="_blank">@Sv_allmight -

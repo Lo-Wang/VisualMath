@@ -674,8 +674,11 @@ video {
 
 .sandbox-img {
   width: 1440px;
-  height: 200px;
   margin-bottom: 50px;
+}
+
+sub{
+  font-size: 15px;
 }
 
 .sandbox-paragraph {
@@ -798,12 +801,6 @@ canvas {
 
 footer {
   float: left;
-}
-
-.footer-social {
-  height: auto;
-  margin: 0 auto;
-  padding-top: 80px;
 }
 
 .section-social::before {
