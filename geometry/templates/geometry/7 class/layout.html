@@ -103,10 +103,10 @@
                 {% block content %}
                 {% endblock %}
             </div>
-            <button class="previous-topic"><a class="button-text" href="{% block previous_topic %} {% endblock %}"> <img
+            <button class="previous-topic"><a class="button-text" href="{% block previous_topic %} {% endblock %}"> <img class="arrow-previous"
                     src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""> Предыдущая тема</a></button>
             <button class="next-topic"><a class="button-text" href="{% block next_topic %} {% endblock %}">Следующая
-                тема <img class="arrow" src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""></a></button>
+                тема <img class="arrow-next" src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""></a></button>
         </section>
         <footer class="footer">
             <nav class="footer-social">

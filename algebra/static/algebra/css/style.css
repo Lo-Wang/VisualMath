@@ -795,8 +795,12 @@ canvas {
   transition: 100ms;
 }
 
-.arrow {
+.arrow-next {
   transform: rotate(180deg);
+}
+
+.arrow-previous {
+  margin-right: 8px;
 }
 
 footer {

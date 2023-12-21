@@ -795,7 +795,7 @@ canvas {
   transition: 100ms;
 }
 
-.arrow {
+.arrow-next {
   transform: rotate(180deg);
 }
 

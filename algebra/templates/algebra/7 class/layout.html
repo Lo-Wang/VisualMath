@@ -121,12 +121,14 @@
                     </details>
                 </ul>
             </div>
+            <div class="content">
             {% block content %}
             {% endblock %}
-            <button class="previous-topic"><a class="button-text" href="{% block previous_topic %} {% endblock %}"> <img
+            </div>
+            <button class="previous-topic"><a class="button-text" href="{% block previous_topic %} {% endblock %}"> <img class="arrow-previous"
                     src="{% static 'algebra/icons/CaretLeft.png' %}" alt="">Предыдущая тема</a></button>
             <button class="next-topic"><a class="button-text" href="{% block next_topic %} {% endblock %}">Следующая
-                тема <img class="arrow" src="{% static 'algebra/icons/CaretLeft.png' %}" alt=""></a></button>
+                тема <img class="arrow-next" src="{% static 'algebra/icons/CaretLeft.png' %}" alt=""></a></button>
         </section>
         <footer class="footer">
             <nav class="footer-social">
