@@ -341,6 +341,19 @@ html {
 body {
   line-height: 1;
 }
+canvas {
+    background-color: #ffffff;
+    border: 1px solid #0000ff;
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+  }
 
 ol, ul {
   list-style: none;
@@ -542,7 +555,8 @@ body {
 }
 
 .burger {
-  position: relative;
+  position: absolute;
+  top: -105px;
   z-index: 1;
   cursor: pointer;
   display: block;
@@ -553,10 +567,9 @@ body {
   width: 60px;
   height: 26px;
 }
-
 .burger::before,
 .burger::after {
-  content: "";
+  content: '';
   left: 0;
   position: absolute;
   display: block;
@@ -565,34 +578,28 @@ body {
   border-radius: 10px;
   background: #ffffff;
 }
-
 .burger::before {
   top: 0;
   box-shadow: 0 11px 0 #ffffff;
-  transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
 }
-
 .burger::after {
   bottom: 0;
-  transition: bottom 0.3s 0.15s, transform 0.3s;
+  transition: bottom .3s .15s, transform .3s;
 }
-
 .burger-checkbox:checked + .burger::before {
   top: 11px;
   transform: rotate(45deg);
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
-  transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  transition: box-shadow .15s, top .3s, transform .3s .15s;
 }
-
 .burger-checkbox:checked + .burger::after {
   bottom: 11px;
   transform: rotate(-45deg);
-  transition: bottom 0.3s, transform 0.3s 0.15s;
+  transition: bottom .3s, transform .3s .15s;
 }
-
 .menu-list {
-  top: 300px;
-  left: 0;
+  top: 190px;
   position: absolute;
   display: grid;
   gap: 12px;
@@ -600,8 +607,8 @@ body {
   margin: 0;
   background: #FFA782;
   list-style-type: disc;
-  transform: translateX(-100%);
-  transition: 0.3s;
+  transform: translateX(-900%);
+  transition: .3s;
   width: 400px;
 }
 
@@ -852,7 +859,7 @@ footer {
 }
 
 .footer-social__telegram:last-child {
-  margin-right: 259px;
+  margin-right: 364px;
 }
 
 .footer-social__telegram:hover {

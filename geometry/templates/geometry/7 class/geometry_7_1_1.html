@@ -3,6 +3,10 @@
 {% block title %}
     Прямая, отрезок, луч и угол
 {% endblock %}
+{% block header %}
+    <img class="main-section__header__line" src="{% static 'geometry/img/headers/header_1.svg' %}"
+                         alt="">
+{% endblock %}
 {% block content %}
     <section class="second__section">
         <h2 class="second__section-heading">Прямая, отрезок, луч и угол</h2>
@@ -40,7 +44,7 @@
             которые соединяют три точки, не лежащие на одной прямой. Эта фигура имеет три стороны и три угла.</p>
     </section>
     <section class="conteiner__video">
-        <video class="conteiner__video__video" disablePictureInPicture autoplay loop muted playsinline
+        <video class="conteiner__video__video" disablePictureInPicture controls
                src="{% static 'geometry/vid/7 class/7.1.1.mp4' %}"></video>
     </section>
     <section class="third__section-sandbox">

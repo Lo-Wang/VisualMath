@@ -37,15 +37,12 @@
                 </div>
                 <ul class="main-section__nav-menu">
                     <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="https://forms.yandex.ru/cloud/657c1e80f47e73077fa019c0/">Отзывы</a>
-                    </li>
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Контакты</a>
-                    </li>
                     <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items"
                                                              href="{% url 'about' %}">О нас</a></li>
                 </ul>
                 <div class="main-section__header__hamburger-line">
-                    <img class="main-section__header__line" src="{% static 'algebra/img/header.svg' %}"
-                         alt="">
+                    {% block header %}
+                    {% endblock %}
                 </div>
             </nav>
         </header>
