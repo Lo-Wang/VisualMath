@@ -398,6 +398,10 @@ body {
   float: left;
 }
 
+.fifty-margin-bottom{
+  margin-bottom: 50px;
+}
+
 .nav-btn {
   padding: 12px 16px;
   border-radius: 50px;
@@ -625,7 +629,6 @@ p {
   font-size: 21px;
   font-weight: 400;
   line-height: 150%;
-  margin-bottom: 50px;
 }
 
 .paragraph__pre-line {
@@ -634,7 +637,6 @@ p {
   font-size: 21px;
   font-weight: 400;
   line-height: 150%;
-  margin-bottom: 50px;
 }
 
 span {
