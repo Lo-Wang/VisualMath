@@ -1,10 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'geometry/7 class/layout.html' %}
+{% load static %}
+{% block title %}
+    Треугольники
+{% endblock %}
+{% block content %}
+    <h2 class="heading">Треугольники</h2>
+    <h3>Треугольник</h3>
+    <p>Геометрическая фигура, образованная тремя отрезками, которые соединяют три не лежащие на одной прямой точки.
+        Три точки называются <span>вершинами</span>, а отрезки — <span>сторонами</span> треугольника. Углы между
+        лучами, содержащими две стороны и выходящими из одной вершины треугольника, называются <span>углами</span>
+        треугольника. На рисунке изображён треугольник с вершинами А, В, С и сторонами АВ, ВС и С А. Такой
+        треугольник будем обозначать так: АВС (читается: «треугольник АВС»). Этот же треугольник можно обозначить
+        иначе, записав буквы А, В, С в другом порядке: ВСА, СВА и т. д.
+    </p>
+    <div class="img">
+        <img src="{% static '/geometry/img/7_2_1/Group 685.svg' %}" alt="">
+    </div>
+    <p class="paragraph__pre-line">Три угла — ∠ВАС, ∠СВА и ∠АСВ — называются углами треугольника АВС. Часто их обозначают одной буквой: ∠А, ∠В, ∠С.
+        Сумма длин трёх сторон треугольника называется его <span>периметром</span>.
+        Напомним, что две фигуры, в частности два треугольника, называются равными, если их можно совместить наложением. На рисунке изображены равные треугольники АВС и А<sub>1</sub>В<sub>1</sub>С<sub>1</sub>.
+    </p>
+    <div class="img">
+        <img src="{% static '/geometry/img/7_2_1/Group 689.svg' %}" alt="">
+    </div>
+    <p class="paragraph__pre-line fifty-margin-bottom">Каждый из этих треугольников можно наложить на другой так, что они полностью совместятся, т. е. попарно совместятся их вершины и стороны. Ясно, что при этом совместятся попарно и углы этих треугольников.
+        Таким образом, если два треугольника равны, то элементы (т. е. стороны и углы) одного треугольника соответственно равны элементам другого треугольника.
+        Отметим, что в равных треугольниках против соответственно равных сторон (т.е. совмещающихся при наложении) лежат равные углы, и обратно: против соответственно равных углов лежат равные стороны. Так, например, в равных треугольниках АВС и А<sub>1</sub>В<sub>1</sub>С<sub>1</sub>, изображённых на рисунке выше, против соответственно равных сторон АВ и А<sub>1</sub>В<sub>1</sub> лежат равные углы С и С<sub>1</sub>.
+        Равенство треугольников АВС и А<sub>1</sub>В<sub>1</sub>С<sub>1</sub> обозначается так: АВС = А<sub>1</sub>В<sub>1</sub>С<sub>1</sub>. Оказывается, что равенство двух треугольников можно установить, не накладывая один треугольник на другой, а сравнивая только некоторые их элементы.
+    </p>
+    <div class="conteiner__video">
+        <video disablePictureInPicture controls src="{% static '/geometry/video/Pythagoras.mp4'%}"></video>
+    </div>
 
-</body>
-</html>
+    <img class="sandbox-img" src="{% static '/geometry/img/sandbox.svg' %}" alt="">
+    <div class="sandbox-paragraph">
+        <p class="sandbox-first-p">Узнай больше о треугольниках и поэкспериментируй с ними здесь. </p>
+        <p class="sandbox-second-p">Они могут вращаться, так что ты сможешь изучить их со всех сторон. </p>
+    </div>
+    <div class="sandbox">
+        <canvas></canvas>
+        <!-- <div class="sandbox-buttons">
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                  </div> -->
+    </div>
+    <script src="{% static 'geometry/js/7 class/java_script.js' %}"></script>
+{% endblock %}
+{% block previous_topic %}
+    {% url "maintenance" %}
+{% endblock %}
+{% block next_topic %} 
+    {% url "geometry_7_2_2" %}
+{% endblock %}

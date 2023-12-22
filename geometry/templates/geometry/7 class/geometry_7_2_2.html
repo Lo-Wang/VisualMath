@@ -1,0 +1,41 @@
+{% extends 'geometry/7 class/layout.html' %}
+{% load static %}
+{% block title %}
+    Первый признак равенства треугольников
+{% endblock %}
+{% block content %}
+    <h2 class="heading">Первый признак равенства треугольников</h2>
+    <h3>Теорема</h3>
+    <p>Если две стороны и угол между ними одного треугольника соответственно равны двум сторонам и углу между ними другого треугольника, то такие треугольники равны.
+    </p>
+    <div class="img">
+        <img src="{% static '/geometry/img/7_2_2/Group 694.svg' %}" alt="">
+    </div>
+    <h3>Доказательство</h3>
+    <p class="paragraph__pre-line fifty-margin-bottom">Рассмотрим треугольники АВС и А<sub>1</sub>В<sub>1</sub>С<sub>1</sub>, у которых АВ = А<sub>1</sub>В<sub>1</sub>, АС = А<sub>1</sub>С<sub>1</sub>, углы А и А<sub>1</sub> равны. Докажем, что АВС = А<sub>1</sub>В<sub>1</sub>С<sub>1</sub>.
+Так как ∠A = ∠А<sub>1</sub>, то треугольник АВС можно наложить на треугольник А<sub>1</sub>В<sub>1</sub>С<sub>1</sub> так, что вершина А совместится с вершиной А<sub>1</sub>, а стороны АВ и АС наложатся соответственно на лучи А<sub>1</sub>В<sub>1</sub> и А<sub>1</sub>С<sub>1</sub>. Поскольку АВ = А<sub>1</sub>В<sub>1</sub>, АС = А<sub>1</sub>С<sub>1</sub>, то сторона АВ совместится со стороной А<sub>1</sub>В<sub>1</sub>, а сторона АС — со стороной А<sub>1</sub>С<sub>1</sub>; в частности, совместятся точки В и В<sub>1</sub>, С и С<sub>1</sub>. Следовательно, совместятся стороны ВС и В<sub>1</sub>С<sub>1</sub>. Итак, треугольники АВС и А<sub>1</sub>В<sub>1</sub>С<sub>1</sub> полностью совместятся, значит, они равны. Теорема доказана.
+Доказанная теорема выражает признак (равенство у треугольников двух сторон и угла между ними), по которому можно сделать вывод о равенстве треугольников. Он называется первым признаком равенства треугольников.
+    </p>
+    <div class="conteiner__video">
+        <video disablePictureInPicture controls src="{% static '/geometry/vid/7 class/7.2.2.mp4'%}"></video>
+    </div>
+
+    <img class="sandbox-img" src="{% static '/geometry/img/sandbox.svg' %}" alt="">
+    <div class="sandbox-paragraph">
+        <p class="sandbox-first-p">Узнай больше о треугольниках и поэкспериментируй с ними здесь. </p>
+        <p class="sandbox-second-p">Они могут вращаться, так что ты сможешь изучить их со всех сторон. </p>
+    </div>
+    <div class="sandbox">
+        <canvas></canvas>
+        <!-- <div class="sandbox-buttons">
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                  </div> -->
+    </div>
+    <script src="{% static 'geometry/js/7 class/java_script.js' %}"></script>
+{% endblock %}
+{% block previous_topic %}
+    {% url "geometry_7_2_1" %}
+{% endblock %}

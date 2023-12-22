@@ -20,40 +20,31 @@
                                             src="{% static 'geometry/icons/logo-3.svg' %}"
                                             alt=""></a>
             <nav>
-                <div class="navbar">
-                    <div class="dropdown">
-                        <button class="dropbtn"><a class="dropbtn__algebra"
-                                                   href="{% url 'maintenance' %}#algebra-content">алгебра</a></button>
-                    </div>
-                </div>
-                <div class="navbar-1">
-                    <div class="dropdown-1">
-                        <button class="dropbtn-1"><a class="dropbtn__geometry"
-                                                     href="{% url 'maintenance' %}#geometry-content">геометрия</a>
-                        </button>
-                    </div>
+                <div class="maintenance-buttons">
+                    <button class="nav-btn"><a class="nav-btn__a"
+                                               href="{% url 'maintenance' %}#algebra-content">алгебра</a></button>
+                    <button class="nav-btn"><a class="nav-btn__a" href="{% url 'maintenance' %}#geometry-content">геометрия</a>
+                    </button>
                 </div>
                 <ul class="main-section__nav-menu">
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="https://forms.yandex.ru/cloud/657c1e80f47e73077fa019c0/">Отзывы</a>
-                    </li>
-                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items" href="#">Контакты</a>
+                    <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items"
+                                                             href="https://forms.yandex.ru/cloud/657c1e80f47e73077fa019c0/">Отзывы</a>
                     </li>
                     <li class="main-section__nav-menu-li"><a class="main-section__nav-menu-items"
-                                                             href="{% url 'about' %}">О нас</a></li>
+                                                             href="{% url 'about' %}">О нас</a>
+                    </li>
                 </ul>
-                <div class="main-section__header__hamburger-line">
-                    <img class="main-section__header__line" src="{% static 'geometry/img/headers/header_1.svg' %}"
+                <img class="main-section__header-img" src="{% static 'geometry/img/header.svg' %}"
                          alt="">
-                </div>
             </nav>
         </header>
-        <section class="second__section">
+        <section class="content__section">
             <div class="hamburger">
                 <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
                 <label for="burger-checkbox" class="burger"></label>
                 <ul class="menu-list">
-                    <details class="menu-list-item">
-                        <summary class="menu-item__details">Глава I. Начальные геометрические сведения</summary>
+                    <details class="menu-item__details">
+                        <summary class="menu-item__summary">Глава I. Начальные геометрические сведения</summary>
                         <div class="list__details-content">
                             <li><a class="details-content" href="{% url 'geometry_7_1_1' %}">Прямая, отрезок, луч и
                                 угол</a></li>
@@ -64,11 +55,11 @@
                             <li><a class="details-content" href="#">Перпендикулярные прямые</a></li>
                         </div>
                     </details>
-                    <details class="menu-list-item">
-                        <summary class="menu-item__details">Глава II. Треугольники</summary>
+                    <details class="menu-item__details">
+                        <summary class="menu-item__summary">Глава II. Треугольники</summary>
                         <div class="list__details-content">
-                            <li><a class="details-content" href="#">Треугольники</a></li>
-                            <li><a class="details-content" href="#">Первый признак равенства треугольников</a></li>
+                            <li><a class="details-content" href="{% url 'geometry_7_2_1' %}">Треугольники</a></li>
+                            <li><a class="details-content" href="{% url 'geometry_7_2_2' %}">Первый признак равенства треугольников</a></li>
                             <li><a class="details-content" href="#">Медианы, биссектрисы и высоты треугольников</a></li>
                             <li><a class="details-content" href="#">Свойства равнобедренного треугольника</a></li>
                             <li><a class="details-content" href="#">Второй признак равенства треугольников</a></li>
@@ -77,8 +68,8 @@
                             <li><a class="details-content" href="#">Примеры задач на построение</a></li>
                         </div>
                     </details>
-                    <details class="menu-list-item">
-                        <summary class="menu-item__details">Глава III. Параллельные прямые</summary>
+                    <details class="menu-item__details">
+                        <summary class="menu-item__summary">Глава III. Параллельные прямые</summary>
                         <div class="list__details-content">
                             <li><a class="details-content" href="#">Признаки параллельности прямых</a></li>
                             <li><a class="details-content" href="#">Практические способы построения параллельных
@@ -87,8 +78,8 @@
                             <li><a class="details-content" href="#">Свойства параллельных прямых</a></li>
                         </div>
                     </details>
-                    <details class="menu-list-item">
-                        <summary class="menu-item__details">Глава IV. Соотношения между сторонами и углами
+                    <details class="menu-item__details">
+                        <summary class="menu-item__summary">Глава IV. Соотношения между сторонами и углами
                             треугольника
                         </summary>
                         <div class="list__details-content">
@@ -107,16 +98,21 @@
                     </details>
                 </ul>
             </div>
-            {% block content %}
-            {% endblock %}
-            <button class="previous-topic"><a class="button-text" href="{% block previous_topic %} {% endblock %}"> <img
+            <div class="content">
+
+                {% block content %}
+                {% endblock %}
+            </div>
+            <button class="previous-topic"><a class="button-text" href="{% block previous_topic %} {% endblock %}"> <img class="arrow-previous"
                     src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""> Предыдущая тема</a></button>
             <button class="next-topic"><a class="button-text" href="{% block next_topic %} {% endblock %}">Следующая
-                тема <img class="arrow" src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""></a></button>
+                тема <img class="arrow-next" src="{% static 'geometry/icons/CaretLeft.png' %}" alt=""></a></button>
         </section>
         <footer class="footer">
             <nav class="footer-social">
-                <img class="footer-social__logo" src="{% static 'main/icons/logo-3.svg' %}" alt="">
+                <a href="{% url 'home' %}"><img class="footer-social__logo"
+                                            src="{% static 'geometry/icons/logo-3.svg' %}"
+                                            alt=""></a>
                 <div class="footer-social__connection">
                     <img class="footer-social-img" src="{% static 'main/icons/social-icons.png' %}" alt="">
                     <a class="footer-social__telegram" href="https://t.me/Sv_allmight" target="_blank">@Sv_allmight -
@@ -126,8 +122,8 @@
                         Денис Огородов</a>
                 </div>
                 <div class="footer-social__nav-menu">
-                    <a class="footer-social__nav-menu-items" href="https://forms.yandex.ru/cloud/657c1e80f47e73077fa019c0/">Отзывы</a>
-                    <a class="footer-social__nav-menu-items" href="">Контакты</a>
+                    <a class="footer-social__nav-menu-items"
+                       href="https://forms.yandex.ru/cloud/657c1e80f47e73077fa019c0/">Отзывы</a>
                     <a class="footer-social__nav-menu-items" href="{% url 'about' %}">О нас</a>
                 </div>
             </nav>

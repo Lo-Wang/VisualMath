@@ -10,3 +10,7 @@ def geometry_7_2_1(request):
     return render(request, "geometry/7 class/geometry_7_2_1.html")
 
 
+def geometry_7_2_2(request):
+    return render(request, "geometry/7 class/geometry_7_2_2.html")
+
+
