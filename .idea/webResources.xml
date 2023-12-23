@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebResourcesPaths">
+    <contentEntries>
+      <entry url="file://$PROJECT_DIR$">
+        <entryData>
+          <resourceRoots>
+            <path value="file://$PROJECT_DIR$/main/static" />
+            <path value="file://$PROJECT_DIR$/geometry/static" />
+            <path value="file://$PROJECT_DIR$/main/static/main" />
+            <path value="file://$PROJECT_DIR$/main/static/main/css" />
+            <path value="file://$PROJECT_DIR$/main/static/main/img" />
+            <path value="file://$PROJECT_DIR$/main/static/main/js" />
+            <path value="file://$PROJECT_DIR$/main/static/main/vid" />
+            <path value="file://$PROJECT_DIR$/algebra/static" />
+            <path value="file://$PROJECT_DIR$/algebra/static/algebra/css" />
+            <path value="file://$PROJECT_DIR$/algebra/static/algebra/img" />
+            <path value="file://$PROJECT_DIR$/algebra/static/algebra/js" />
+            <path value="file://$PROJECT_DIR$/algebra/static/algebra/vid" />
+            <path value="file://$PROJECT_DIR$/algebra/static/algebra/vid//7 class" />
+            <path value="file://$PROJECT_DIR$/algebra/static/algebra/vid//8 class" />
+            <path value="file://$PROJECT_DIR$/algebra/static/algebra/vid//9 class" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry/vid" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry/css" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry/img" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry/js" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry/vid/7 class" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry/vid/8 class" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry/vid/9 class" />
+            <path value="file://$PROJECT_DIR$/geometry/static/geometry/js/7 class" />
+            <path value="file://$PROJECT_DIR$/algebra/static/algebra" />
+          </resourceRoots>
+        </entryData>
+      </entry>
+    </contentEntries>
+  </component>
+</project>
