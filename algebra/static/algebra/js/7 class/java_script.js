@@ -19,14 +19,8 @@ var selectedVertex = null;
 var ptx, pty = 0;
 var text = '';
 
-const alignment = 'left';
-//const padding = 0;
-//const dx = p[0].x - p[1].x;
-//const dy = p[0].y - p[1].y; 
-//const len = Math.sqrt(dx*dx+dy*dy);  
+const alignment = 'left'; 
 const left = alignment=='left';
-const t0 = left ? p[1] : p[0];
-//const pad = padding / len * (left ? 1 : -1);
 
 function drawGrid() {
     ctx.beginPath();
@@ -125,38 +119,60 @@ function drawLine(){
     ctx.closePath();
 
     k, b = find_k_b(p);
-    if(b >= 0){
+    if (k == -1000 && b == -1000) {
+      text = "y = "+ 0 +'; x = '+ (p[1].x-xAxis)/scaleX;
+    }
+    else if(b >= 0){
       text = "y = "+ k +'x+'+ b;}
-    else {
+    else if (b < 0){
       text = "y = "+ k +'x'+ b;
     }
+
 
     drawLabel(text, p);
 }
 
 function find_k_b(p){
-  k = Math.round((((yAxis-p[1].y)/scaleY)-((yAxis-p[0].y)/scaleY))/(((p[1].x-xAxis)/scaleX)-((p[0].x-xAxis)/scaleX))*1000)/1000;
-  b = Math.round((((yAxis-p[0].y)/scaleY)-k*((p[0].x-xAxis)/scaleX))*100)/100;
-  return (k,b);   
+  if ((((p[1].x-xAxis)/scaleX)-((p[0].x-xAxis)/scaleX)) == 0) {
+    k = -1000;
+    b = -1000;
+    return (k,b);
+  }
+  else {
+    k = Math.round((((yAxis-p[1].y)/scaleY)-((yAxis-p[0].y)/scaleY))/(((p[1].x-xAxis)/scaleX)-((p[0].x-xAxis)/scaleX))*100)/100;
+    b = Math.round((((yAxis-p[0].y)/scaleY)-k*((p[0].x-xAxis)/scaleX))*100)/100;
+    return (k,b);
+  }
+     
 }
 
 function drawLabel(text, g){
-  // var alignment = 'left';
-  var padding = 0;
-
+  var padding = 20;
   var dx = g[0].x - g[1].x;
   var dy = g[0].y - g[1].y; 
-  var len = Math.sqrt(dx*dx+dy*dy);  
-  // //const t0, pad;
-  // var left = alignment=='left';
-	// //t0 = left ? g[1] : g[0];
+  var len = Math.sqrt(dx*dx+dy*dy);
+  let angle1 = Math.atan2(dy,dx);
+	if (angle1 < -Math.PI/2 || angle1  > Math.PI/2){
+		var w = g[1];
+		g[1] = g[0];
+		g[0] = w;
+		dx *= -1;
+		dy *= -1;
+    selectedVertex = Math.abs(selectedVertex-1)
+		angle1 -= Math.PI;
+    console.log('после',angle1)
+    console.log(g)
+	}
+
+  let t0, pad;
+	t0 = left ? g[1] : g[0];
 	pad = padding / len * (left ? 1 : -1);
 
   ctx.save();
   ctx.beginPath();
   ctx.textAlign = alignment;
   ctx.translate(t0.x+dx*pad,t0.y+dy*pad);
-  ctx.rotate(Math.atan2(dy,dx));
+  ctx.rotate(angle1);
   ctx.font = 'bold 20px  Arial';
   ctx.fillText(text,5,-5);
   ctx.fill();
@@ -176,17 +192,16 @@ function clearcanvas()
 function checkVertexSelection_2(x, y) {
   for (var i = 0; i < xCoord.length; i++) {
     const distance = Math.abs(x - xCoord[i]);
-    if (distance <= 10) {
+    if (distance <= 5) {
       ptx = xCoord[i];
     }
   }
   for (var i = 0; i < yCoord.length; i++) {
     const distance = Math.abs(y - yCoord[i]);
-    if (distance <= 10) {
+    if (distance <= 5) {
       pty = yCoord[i];
     }
   }
-  //console.log(ptx,pty);
   return(ptx,pty);
  }
 
@@ -196,7 +211,6 @@ function checkVertexSelection_2(x, y) {
       const distance = Math.sqrt((x - vertex.x) ** 2 + (y - vertex.y) ** 2);
       if (distance < 5) {
         selectedVertex = i;
-        //console.log(selectedVertex);
         return;
       }
     }
@@ -224,8 +238,6 @@ function checkVertexSelection_2(x, y) {
     const l = e.clientY - canvas.getBoundingClientRect().top;
 
     ptx, pty = checkVertexSelection_2(k, l);
-    //console.log(checkVertexSelection_2(k, l));
-    //console.log(ptx,pty);
 
     if (selectedVertex !== null) {
       p[selectedVertex].x = ptx;
