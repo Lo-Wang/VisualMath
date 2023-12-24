@@ -34,8 +34,12 @@
                                                              href="{% url 'about' %}">О нас</a>
                     </li>
                 </ul>
-                <img class="main-section__header-img" src="{% static 'geometry/img/header.svg' %}"
+                <h3 class="chapter-name">
+                    {% block chapter_name %} {% endblock %}
+                </h3>
+            <img class="main-section__header-img" src="{% static 'geometry/img/header.svg' %}"
                          alt="">
+                
             </nav>
         </header>
         <section class="content__section">

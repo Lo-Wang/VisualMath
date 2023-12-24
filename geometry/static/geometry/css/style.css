@@ -588,10 +588,24 @@ body {
   transform: translateX(0);
 }
 
+
+.chapter-name{
+  padding-left: 133px;
+  position: absolute;
+  top: 125px;
+  color: #443D3E;
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 130%; /* 39px */
+
+}
+
+
 .main-section__header-img {
   width: 1440px;
   margin-bottom: 35px;
 }
+
 
 .content__section {
   margin-bottom: 50px;
