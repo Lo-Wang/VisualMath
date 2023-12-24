@@ -393,7 +393,7 @@ body {
 
 /* Основа основ */
 .main-section {
-  min-height: 2500px;
+  min-height: 100%;
   overflow: hidden;
 }
 .main-section__nav-container {
@@ -787,7 +787,7 @@ li::marker {
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
   letter-spacing: 1.5px;
   transition: all 0.5s ease;
-  margin-bottom: 157px;
+  margin-bottom: 135px;
 }
 
 .fourth-section-button-algebra:hover {
