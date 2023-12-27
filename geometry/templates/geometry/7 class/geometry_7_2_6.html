@@ -1,0 +1,41 @@
+{% extends 'geometry/7 class/layout.html' %}
+{% load static %}
+{% block chapter_name %}
+    Треугольники
+{% endblock %}
+{% block title %}
+    Третий признак равенства треугольников
+{% endblock %}
+{% block content %}
+    <h2 class="heading">Третий признак равенства треугольников</h2>
+    <h3>Теорема</h3>
+    <p>Если три стороны одного треугольника соответственно равны трём сторонам другого треугольника, то такие треугольники равны.</p>
+    <h3>Доказательство</h3>
+    <p>Рассмотрим треугольники АВС и А1В1С1, у которых АВ = А<sub>1</sub>В<sub>1</sub>, ВС = В<sub>1</sub>С<sub>1</sub>, СА = С<sub>1</sub>А<sub>1</sub>. Докажем, что АВС = А<sub>1</sub>В<sub>1</sub>С<sub>1</sub>. Приложим треугольник АВС к треугольнику А<sub>1</sub>В<sub>1</sub>С<sub>1</sub> так, чтобы вершина А совместилась с вершиной А<sub>1</sub>, вершина В — с вершиной В<sub>1</sub>, а вершины С и С<sub>1</sub> оказались по разные стороны от прямой А<sub>1</sub>В<sub>1</sub>.
+    </p>
+   <!-- <div class="conteiner__video">
+        <video disablePictureInPicture controls src="{% static '/geometry/vid/7 class/7.2.2.mp4'%}"></video>
+    </div>
+
+    <img class="sandbox-img" src="{% static '/geometry/img/sandbox.svg' %}" alt="">
+    <div class="sandbox-paragraph">
+        <p class="sandbox-first-p">Узнай больше о треугольниках и поэкспериментируй с ними здесь. </p>
+        <p class="sandbox-second-p">Они могут вращаться, так что ты сможешь изучить их со всех сторон. </p>
+    </div>
+    <div class="sandbox">
+        <canvas></canvas>
+        <div class="sandbox-buttons">
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                    <button class="sandbox-button"><a class="button-text" href="#">Кнопка</a></button>
+                  </div> 
+    </div>
+    <script src="{% static 'geometry/js/7 class/java_script.js' %}"></script>-->
+{% endblock %}
+{% block previous_topic %}
+    {% url "geometry_7_2_4" %}
+{% endblock %}
+{% block next_topic %} 
+    {% url "geometry_7_2_6" %}
+{% endblock %}
