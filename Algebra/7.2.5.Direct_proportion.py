@@ -1,5 +1,6 @@
 from manim import *
-
+# На правку
+# Необходимо добавить  текстовое описание с объяснениями для школьников
 class gaf(MovingCameraScene):
     def construct(self):  
         
