@@ -2,7 +2,7 @@ from manim import *
 
 class fset(MovingCameraScene):
     def construct(self):
-        intro_text = Text("Первый признак подобия \n       треугольников").scale(1.2)
+        intro_text = Tex(r"Первый признак равенства \\ треугольников").scale(1.2)
         info_text = Tex(r"Если две стороны и угол между ними одного " +
                           r"треугольника соответственно равны двум " +
                           r"сторонам и углу между ними другого " +

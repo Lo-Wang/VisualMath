@@ -2,13 +2,13 @@ from manim import *
 
 class sset(MovingCameraScene):
     def construct(self):
-        intro_text = Text("Второй признак подобия \n       треугольников").scale(1.2)
+        intro_text = Tex(r"Второй признак равенства \\треугольников").scale(1.2)
         info_text = Tex(r"Если сторона и два угола прилежащей к ней одного " +
                           r"треугольника соответственно равны стороне " +
                           r"и двум углам прилежащей к ней другого " +
                           r"треугольника, то такие треугольники равны", tex_to_color_map={"две стороны и угол между ними": ORANGE}).scale(0.8)
         
-        info_text_1 = Tex(r"\begin{justify}Докажем что $\triangle$1 = $\triangle$2\end{justify}").move_to(2* DOWN)
+        info_text_1 = Tex(r"\begin{justify}Докажем что $\triangle$1 = $\triangle$2\end{justify}").move_to(2.5* DOWN)
 
         info_text_2 = Tex(r"\begin{justify} Наложим два треугольника так, чтобы вершина $A$ " + 
                           r"\\совместилась с $A_1$, $AB$ с $A_1B_1$, $C$ по одну сторону с $C_1$ \end{justify}").move_to(np.array([0,-2,0])).scale(0.7)
