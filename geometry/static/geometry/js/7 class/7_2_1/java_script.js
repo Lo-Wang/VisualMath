@@ -7,6 +7,7 @@ canvas.height = 400;
 const degreesToRadians = (n) => (n / 180) * Math.PI;
 const radiansToDegrees = (n) => (n / Math.PI) * 180;
 
+const alignment = 'center'; 
 
 
 // Далее задаем начальные вершины для треугольника
@@ -34,7 +35,7 @@ function drawTriangle() {
   ctx.lineTo(triangle.vertices[1].x, triangle.vertices[1].y);
   ctx.lineTo(triangle.vertices[2].x, triangle.vertices[2].y);
   ctx.lineTo(triangle.vertices[0].x, triangle.vertices[0].y);
-  ctx.strokeStyle='rgba(100,150,185)';
+  ctx.strokeStyle='rgba(68, 61, 62)';
   //ctx.closePath();
   ctx.stroke();
 
@@ -42,15 +43,15 @@ function drawTriangle() {
 
     ctx.beginPath();
     ctx.arc(triangle.vertices[i].x,triangle.vertices[i].y,8,0,2*Math.PI,false);
-    ctx.strokeStyle='rgba(100,150,185,0.5)';
-    ctx.fillStyle ='rgba(100,150,185,0.5)';
+    ctx.strokeStyle='rgba(68, 61, 62,0.5)';
+    ctx.fillStyle ='rgba(68, 61, 62,0.5)';
     ctx.fill();
     ctx.stroke();
 
     ctx.beginPath();
     ctx.arc(triangle.vertices[i].x,triangle.vertices[i].y,3,0,2*Math.PI,false);
-    ctx.strokeStyle='blue';
-    ctx.fillStyle ='blue';
+    ctx.strokeStyle='#ff1176';
+    ctx.fillStyle ='#ff1176';
     ctx.fill();
     ctx.stroke();
     
@@ -91,8 +92,8 @@ function drawTriangle() {
       ctx.beginPath();
       ctx.moveTo(x2,y2);
       ctx.arc(x2,y2,20,lineAngle1,lineAngle2,false);
-      ctx.strokeStyle='rgba(100,150,185,0.5)';
-      ctx.fillStyle ='rgba(100,150,185,0.5)';
+      ctx.strokeStyle='rgba(68, 61, 62,0.5)';
+      ctx.fillStyle ='rgba(68, 61, 62,0.5)';
       ctx.fill();
       ctx.stroke();
 
@@ -100,28 +101,72 @@ function drawTriangle() {
       const my = -Math.sin((lineAngle1 + lineAngle2) / 2) * 35 + y2;
 
       // render the angle
-      ctx.fillStyle = 'rgba(100,150,185)';
+      ctx.fillStyle = 'rgba(68, 61, 62)';
       ctx.font = "16px Georgia";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText((360-(lineAngle1 - lineAngle2) * (180 /Math.PI)).toFixed(0),mx,my)
     }
 
-    function lenSides(x1,y1,x2,y2,side){
-      vector = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1))
-      ctx.fillText(Math.round(vector), coodsOfCentr.sides[side].x+15, coodsOfCentr.sides[side].y-20);
+    // function lenSides(x1,y1,x2,y2,side){
+    //   vector = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1))
+    //   ctx.fillText(Math.round(vector), coodsOfCentr.sides[side].x+15, coodsOfCentr.sides[side].y-20);
+    // }
+
+    function drawLabel(g, h){
+      var padding = 20;
+      var dx = g.x - h.x;
+      var dy = g.y - h.y; 
+      var len = Math.sqrt(dx*dx+dy*dy);
+      let angle1 = Math.atan2(dy,dx);
+      if (angle1 < -Math.PI/2 || angle1  > Math.PI/2){
+        var w = h;
+        h = g;
+        g = w;
+        dx *= -1;
+        dy *= -1;
+        //selectedVertex = Math.abs(selectedVertex-1)
+        angle1 -= Math.PI;
+      }
+    
+      let t0, pad;
+      t0 = h;
+      pad = 1/2;
+    
+      ctx.save();
+      ctx.beginPath();
+      ctx.textAlign = alignment;
+      ctx.translate(t0.x+dx*pad,t0.y+dy*pad);
+      ctx.rotate(angle1);
+      ctx.font = '16px  Arial';
+      ctx.strokeStyle ='rgba(68, 61, 62)';
+      ctx.fillStyle ='rgba(68, 61, 62)';
+      vector = Math.sqrt((h.x-g.x)*(h.x-g.x)+(h.y-g.y)*(h.y-g.y))
+      //console.log(vector)
+      ctx.fillText(Math.round(vector),5,-5);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+      ctx.restore();
+    
     }
+
+
 
     getAngles(triangle.vertices[1].x, triangle.vertices[1].y, triangle.vertices[0].x, triangle.vertices[0].y, triangle.vertices[2].x, triangle.vertices[2].y)
     getAngles(triangle.vertices[0].x, triangle.vertices[0].y, triangle.vertices[1].x, triangle.vertices[1].y, triangle.vertices[2].x, triangle.vertices[2].y)
     getAngles(triangle.vertices[1].x, triangle.vertices[1].y, triangle.vertices[2].x, triangle.vertices[2].y, triangle.vertices[0].x, triangle.vertices[0].y)
       
-    lenSides(triangle.vertices[0].x,triangle.vertices[0].y,triangle.vertices[1].x,triangle.vertices[1].y,0);
-    lenSides(triangle.vertices[1].x,triangle.vertices[1].y,triangle.vertices[2].x,triangle.vertices[2].y,1);
-    lenSides(triangle.vertices[2].x,triangle.vertices[2].y,triangle.vertices[0].x,triangle.vertices[0].y,2);
+    drawLabel(triangle.vertices[0], triangle.vertices[1])
+    drawLabel(triangle.vertices[1], triangle.vertices[2])
+    drawLabel(triangle.vertices[2], triangle.vertices[0])
+
+    // lenSides(triangle.vertices[0].x,triangle.vertices[0].y,triangle.vertices[1].x,triangle.vertices[1].y,0);
+    // lenSides(triangle.vertices[1].x,triangle.vertices[1].y,triangle.vertices[2].x,triangle.vertices[2].y,1);
+    // lenSides(triangle.vertices[2].x,triangle.vertices[2].y,triangle.vertices[0].x,triangle.vertices[0].y,2);
         
     ctx.font = "21px Georgia";
-    ctx.fillStyle = "Blue";
+    ctx.fillStyle = "#ff1176";
     ctx.fillText("A", triangle.vertices[0].x+10, triangle.vertices[0].y-10);
     ctx.fillText("B", triangle.vertices[1].x+10, triangle.vertices[1].y-10);
     ctx.fillText("C", triangle.vertices[2].x+10, triangle.vertices[2].y-10);
@@ -168,47 +213,3 @@ function drawTriangle() {
   }
   // для начальной отрисовки треугольника
   drawTriangle();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  window.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('.nav-menu'),
-    menuItem = document.querySelectorAll('.nav-menu__list-item'),
-    hamburger = document.querySelector('.hamburger');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('hamburger_active');
-        menu.classList.toggle('nav-menu_active');
-    });
-
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.toggle('hamburger_active'); 
-            menu.classList.toggle('nav-menu_active'); //переделать названия под классы глав 
-        })
-    })
-})

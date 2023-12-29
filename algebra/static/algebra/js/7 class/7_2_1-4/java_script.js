@@ -25,8 +25,8 @@ const left = alignment=='left';
 function drawGrid() {
     ctx.beginPath();
     ctx.font = `${Math.round(scaleX/2)}px  Arial`;
-    ctx.strokeStyle = 'rgba(0,0,0,0.5)';
-    ctx.fillStyle ='rgba(0,0,0,0.5)';
+    ctx.strokeStyle = "#443D3E";
+    ctx.fillStyle ="#443D3E";
     ctx.lineWidth = 1;
     for (var x = 0; x <= width; x += scaleX) {
         ctx.moveTo(x, 0);
@@ -64,7 +64,7 @@ function drawGrid() {
 
         // draw line plus arrowhead
         ctx.beginPath();
-        ctx.strokeStyle = "red";
+        ctx.strokeStyle = "#EC7500";
         ctx.lineWidth = 2;
         // draw the line from p0 to p1
         ctx.moveTo(p0.x,p0.y);
@@ -84,7 +84,7 @@ function drawGrid() {
     var p1={x:xAxis,y:0};
     drawLineWithArrowhead(p0,p1,10);
     ctx.font = "21px Georgia";
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "#EC7500";
     ctx.fillText("y", p1.x-20, p1.y+15);
     p0={x:0,y:yAxis};
     p1={x:width,y:yAxis};
@@ -99,9 +99,9 @@ function drawLine(){
     ctx.beginPath();
     ctx.arc(p[0].x,p[0].y,3,0,2*Math.PI,false);
     ctx.font = 'bold  15px  Arial';
-    ctx.fillStyle ='blue';
+    ctx.fillStyle ='#443D3E';
     ctx.fillText("("+(p[0].x-xAxis)/scaleX+','+(yAxis-p[0].y)/scaleY+")", p[0].x-15, p[0].y+20);
-    ctx.strokeStyle='blue';
+    ctx.strokeStyle='#443D3E';
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
@@ -109,9 +109,9 @@ function drawLine(){
     ctx.beginPath();
     ctx.arc(p[1].x,p[1].y,3,0,2*Math.PI,false);
     ctx.font = 'bold 15px  Arial';
-    ctx.fillStyle ='blue';
+    ctx.fillStyle ='#443D3E';
     ctx.fillText("("+(p[1].x-xAxis)/scaleX+','+(yAxis-p[1].y)/scaleY+")", p[1].x-20, p[1].y+20);
-    ctx.strokeStyle='blue';
+    ctx.strokeStyle='#443D3E';
     ctx.fill();
     ctx.moveTo(p[1].x,p[1].y);
     ctx.lineTo(p[0].x,p[0].y);
