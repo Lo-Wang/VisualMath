@@ -111,7 +111,7 @@ manim -pqh First_Sign_Equality_Triangles.py fset
 
 В данный момент существует наглядная схема разработки продукта VisualMath. 
 
-![logo](https://cdn.discordapp.com/attachments/1150438545748656179/1183813463051612271/C_.png?ex=6589b333&is=65773e33&hm=ab11dabc186538a4ad03636f1411475185574583a2a069294040136aa2d59862&)
+![logo](https://cdn.discordapp.com/attachments/1150438545748656179/1183813463051612271/C_.png?ex=65f87133&is=65e5fc33&hm=b699687c74cf18ad979ae4a74c26c36ba7511e1038d99f8319f219524d92f8b4&)
 
 1) Вытянуть актуальную версию ветки ```release```
 2) Пушить в свою ветку, выполнить стэш изменений из ветки в ветку ```release```
