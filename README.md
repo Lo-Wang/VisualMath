@@ -1,6 +1,6 @@
 
 
-![logo](https://media.discordapp.net/attachments/1150438545748656179/1180099686149935184/Intro_fro_rdmd_1.png?ex=657c307a&is=6569bb7a&hm=bfe6c184eac1607b341401bf3225f8e20294962764fa28d48eed3b5b9d721812&=&format=webp&quality=lossless&width=1202&height=676)
+![logo](https://cdn.discordapp.com/attachments/1150438545748656179/1180099686149935184/Intro_fro_rdmd_1.png?ex=65f428fa&is=65e1b3fa&hm=12bee6f007c3063600959119103fa1b3c526b54edc789c8efebe1aa85eeed335&)
 
 ![Static Badge](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ![Static Badge](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white)
